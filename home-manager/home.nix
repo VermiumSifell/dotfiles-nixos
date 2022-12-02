@@ -44,6 +44,9 @@
   home.packages = with pkgs; [
     discord
     spotify
+    firefox
+    thunderbird
+    git
   ];
 
   # Enable home-manager and git

@@ -84,11 +84,11 @@
       ];
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
       extraGroups = [ "wheel" ];
-      packages = with pkgs; [
-        firefox
-        thunderbird
-        git
-      ];
+#      packages = with pkgs; [
+#        firefox
+#        thunderbird
+#        git
+#      ];
     };
   };
 
