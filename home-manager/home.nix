@@ -51,6 +51,7 @@
     ciscoPacketTracer8
     docker
     docker-compose
+    alacritty
   ];
 
   # Enable home-manager and git
