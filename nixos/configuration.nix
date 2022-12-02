@@ -123,8 +123,6 @@
     passwordAuthentication = false;
   };
 
-  services.dunst.enable = true;
-
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
