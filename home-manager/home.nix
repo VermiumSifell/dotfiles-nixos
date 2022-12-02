@@ -52,6 +52,7 @@
     docker
     docker-compose
     alacritty
+    dunst
   ];
 
   # Enable home-manager and git
