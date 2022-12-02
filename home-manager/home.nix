@@ -47,6 +47,10 @@
     firefox
     thunderbird
     git
+    steam
+    ciscoPacketTracer8
+    docker
+    docker-compose
   ];
 
   # Enable home-manager and git
