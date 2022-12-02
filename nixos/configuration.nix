@@ -83,6 +83,7 @@
     enable = true;
     extraPackages = with pkgs; [
       dmenu
+      dunst
     ];
   };
 
