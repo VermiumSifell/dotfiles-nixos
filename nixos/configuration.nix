@@ -86,7 +86,7 @@
     ];
   };
 
-  services.xserver.layout = "se";
+  services.xserver.layout = "sv";
 
   # Enable the Plasma 5 Desktop Environment.
   # services.xserver.displayManager.sddm.enable = true;
