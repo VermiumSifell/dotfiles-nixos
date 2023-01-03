@@ -37,7 +37,7 @@
     docker-compose
     alacritty
     dunst
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Jetbrains" ]; })
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetbrainsMono" ]; })
   ];
 
   # Enable home-manager and git
