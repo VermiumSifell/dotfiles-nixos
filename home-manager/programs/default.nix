@@ -2,4 +2,5 @@
   ./alacritty
   ./gpg
   ./htop
+  ./starship
 ]
