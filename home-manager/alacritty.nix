@@ -3,9 +3,17 @@
     enable = true;
     settings = {
       font = {
-        normal.family = "Fira Code";
+        normal.family = "JetbrainsMono Nerd Font";
         size = 10.5;
       };
+
+      colors = {
+        primary = {
+          background = "#2e3440";
+          foreground = "#d8dee9";
+        };
+      };
+
       window = {
         opacity = 0.8;
         dynamic_title = true;
