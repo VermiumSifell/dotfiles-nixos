@@ -2,6 +2,11 @@
   programs.alacritty = {
     enable = true;
     settings = {
+      env = {
+        TERM = "xterm-256color";
+        WINIT_X11_SCALE_FACTOR = "1.5";
+      };
+
       font = {
         normal.family = "JetbrainsMono Nerd Font";
         size = 6;
