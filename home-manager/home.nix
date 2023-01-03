@@ -12,6 +12,7 @@
     # ./polybar.nix
     ./gnupg.nix
     ./polybar.nix
+    ./alacritty.nix
   ];
 
   # TODO: Set your username
