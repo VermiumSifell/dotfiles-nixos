@@ -28,7 +28,7 @@ in
       githubSupport = true;
     };
     config = ./config.ini;
-    extraConfig =[
+    extraConfig = [
       battery
       bspwm
       cpu
@@ -42,7 +42,8 @@ in
       wlan
       xkeyboard
       xwindow
-      xworkspaces;]
+      xworkspaces
+    ];
     script = ''
       polybar top &
     '';
