@@ -2,6 +2,7 @@
 
 let
 
+  battery = builtins.readFile ./modules/battery.ini;
   bspwm = builtins.readFile ./modules/bspwm.ini;
   cpu = builtins.readFile ./modules/cpu.ini;
   date = builtins.readFile ./modules/date.ini;
