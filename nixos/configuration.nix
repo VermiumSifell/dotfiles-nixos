@@ -82,6 +82,7 @@
     extraPackages = with pkgs; [
       dmenu
       libnotify
+      slock
     ];
   };
 
