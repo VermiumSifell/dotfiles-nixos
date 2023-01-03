@@ -1,4 +1,4 @@
 [
-  ./bash.nix
-  ./zsh.nix
+  ./bash
+  ./zsh
 ]
