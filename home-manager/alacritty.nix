@@ -4,7 +4,7 @@
     settings = {
       font = {
         normal.family = "JetbrainsMono Nerd Font";
-        size = 10.5;
+        size = 6;
       };
 
       colors = {
