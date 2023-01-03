@@ -45,7 +45,7 @@
   };
 
   networking.hostName = "AxelLaptop01-nixos";
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   time.timeZone = "Europe/Stockholm";
 
@@ -86,11 +86,11 @@
   # services.xserver.desktopManager.plasma5.enable = true;
 
 
-   programs.steam = {
-     enable = true;
-     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-   };
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
 
 
   users.users = {
@@ -105,11 +105,11 @@
       ];
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
       extraGroups = [ "wheel" ];
-#      packages = with pkgs; [
-#        firefox
-#        thunderbird
-#        git
-#      ];
+      #      packages = with pkgs; [
+      #        firefox
+      #        thunderbird
+      #        git
+      #      ];
     };
   };
 
