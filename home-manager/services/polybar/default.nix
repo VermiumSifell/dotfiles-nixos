@@ -2,6 +2,19 @@
 
 let
 
+  bspwm = builtins.readFile ./modules/bspwm.ini;
+  cpu = builtins.readFile ./modules/cpu.ini;
+  date = builtins.readFile ./modules/date.ini;
+  eth = builtins.readFile ./modules/eth.ini;
+  filesystem = builtins.readFile ./modules/filesystem.ini;
+  i3 = builtins.readFile ./modules/i3.ini;
+  memory = builtins.readFile ./modules/memory.ini;
+  network-base = builtins.readFile ./modules/network-base.ini;
+  pulseaudio = builtins.readFile ./modules/pulseaudio.ini;
+  wlan = builtins.readFile ./modules/wlan.ini;
+  xkeyboard = builtins.readFile ./modules/xkeyboard.ini;
+  xwindow = builtins.readFile ./modules/xwindow.ini;
+  xworkspaces = builtins.readFile ./modules/xworkspaces.ini;
 
 in
 {
@@ -15,20 +28,21 @@ in
     };
     config = ./config.ini;
     extraConfig = [
-      ./modules/battery.ini
-      ./modules/bspwm.ini
-      ./modules/cpu.ini
-      ./modules/date.ini
-      ./modules/eth.ini
-      ./modules/filesystem.ini
-      ./modules/i3.ini
-      ./modules/memory.ini
-      ./modules/network-base.ini
-      ./modules/pulseaudio.ini
-      ./modules/wlan.ini
-      ./modules/xkeyboard.ini
-      ./modules/xwindow.ini
-      ./modules/xworkspaces.ini
+      builtins.readFile
+      battery
+      bspwm
+      cpu
+      date
+      eth
+      filesystem
+      i3
+      memory
+      networke.ini
+      pulseaudio
+      wlan
+      xkeyboard
+      xwindow
+      xworkspaces
     ];
     script = ''
       polybar top &
