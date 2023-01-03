@@ -73,6 +73,28 @@ in
 
   programs.autorandr = {
     enable = true;
+    profiles = {
+      AxelLaptop01v1 = {
+        config = {
+          "HDMI-0" = {
+              enable = true;
+              mode = "1920x1080";
+              primary = true;
+              position = "0x0";
+              rate = "60.00";
+              crtc = 1;
+          };
+          "eDP-1-0" = {
+              enable = true;
+              mode = "1920x1080";
+              primary = true;
+              position = "1920x0";
+              rate = "60.00";
+              crtc = 1;
+          };
+        };
+      };
+    };
     hooks.postswitch = {
         "notify-i3" = "${pkgs.i3}/bin/i3-msg restart";
         "change-dpi" = ''
