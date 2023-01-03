@@ -1,6 +1,6 @@
 {
- imports = [
-  ./bash
-  ./zsh
-];
+  imports = [
+    ./bash.nix
+    ./zsh.nix
+  ];
 }
