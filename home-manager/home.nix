@@ -55,7 +55,7 @@ in
     inherit configHome;
     enable = true;
 
-    configFIle = {
+    configFile = {
       "i3" = {
         source = ./configs/i3;
       recursive = true;
