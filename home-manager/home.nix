@@ -20,6 +20,7 @@ let
     qalculate-qt # The ultimate desktop calculator
     xfce.thunar # Xfce file manager
     vscodium # Open source source code editor developed by Microsoft for Windows, Linux and macOS (VS Code without MS branding/telemetry/licensing)
+    prismlauncher # A free, open source launcher for Minecraft
     minecraft # Official launcher for Minecraft, a sandbox-building game
     element-desktop # A feature-rich client for Matrix.org
     postman # API Development Environment

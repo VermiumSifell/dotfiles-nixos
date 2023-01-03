@@ -75,6 +75,7 @@
     enable = true;
     extraPackages = with pkgs; [
       dmenu
+      libnotify
     ];
   };
 
