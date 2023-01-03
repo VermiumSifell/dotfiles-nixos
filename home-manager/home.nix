@@ -22,9 +22,6 @@
   };
 
   fonts.fontconfig.enable = true;
-  home.packages = [
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetbrainsMono" ]; })
-  ];
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
@@ -40,6 +37,7 @@
     docker-compose
     alacritty
     dunst
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetbrainsMono" ]; })
   ];
 
   # Enable home-manager and git
