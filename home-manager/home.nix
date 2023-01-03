@@ -58,7 +58,11 @@ in
     configFile = {
       "i3" = {
         source = ./configs/i3;
-      recursive = true;
+        recursive = true;
+      };
+      "rofi" = {
+        source = ./configs/rofi;
+        recursive = true;
       };
     };
   };
