@@ -1,4 +1,11 @@
-{ inputs, lib, config, pkgs, ... }: {
+{ inputs, lib, config, pkgs, ... }:
+
+let
+
+  modules = builtins.readDir ./modules;
+
+in
+{
   services.polybar = {
     enable = true;
     package = pkgs.polybar.override {
@@ -7,10 +14,10 @@
       iwSupport = true;
       githubSupport = true;
     };
-    config = {
-    };
+    config = ./config.ini;
+    extraConfig = modules;
     script = ''
-    polybar top &
+      polybar top &
     '';
   };
 }
