@@ -78,6 +78,7 @@
   };
 
   services.gpg-agent.enable = true;
+  services.gpg-agent.pinentryFlavor = "tty";
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
