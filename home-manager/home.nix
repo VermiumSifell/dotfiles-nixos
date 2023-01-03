@@ -21,6 +21,11 @@
     homeDirectory = "/home/vermium";
   };
 
+  fonts.fontconfig.enable = true;
+  home.packages = [
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetbrainsMono" ]; })
+  ];
+
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
