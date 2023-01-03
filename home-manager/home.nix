@@ -40,7 +40,7 @@
 
   services.dunst.enable = true;
 
-  services.gpg.enable = true;
+  programs.gpg.enable = true;
 
   services.polybar = {
     enable = true;
