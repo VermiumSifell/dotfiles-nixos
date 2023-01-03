@@ -28,7 +28,6 @@ in
     };
     config = ./config.ini;
     extraConfig = [
-      builtins.readFile
       battery
       bspwm
       cpu
