@@ -2,7 +2,6 @@
 
 let
 
-  modules = builtins.readDir ./modules;
 
 in
 {
@@ -15,7 +14,6 @@ in
       githubSupport = true;
     };
     config = ./config.ini;
-    extraConfig = modules;
     script = ''
       polybar top &
     '';
