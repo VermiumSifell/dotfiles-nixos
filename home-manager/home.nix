@@ -11,6 +11,7 @@
     # ./nvim.nix
     # ./polybar.nix
     ./gnupg.nix
+    ./polybar.nix
   ];
 
   # TODO: Set your username
@@ -40,46 +41,6 @@
   programs.git.enable = true;
 
   services.dunst.enable = true;
-
-#  programs.gpg.enable = true;
-
-  services.polybar = {
-    enable = true;
-    package = pkgs.polybar.override {
-      i3Support = true;
-      alsaSupport = true;
-      iwSupport = true;
-      githubSupport = true;
-    };
-    config = {
-      "bar/top" = {
-        monitor = "eDP1";
-        width = "100%";
-        height = "3%";
-        radius = 0;
-        # Just sticking them together in the center for now
-        modules-center = "date i3";
-      };
-      "module/date" = {
-        type = "internal/date";
-        internal = 5;
-        date = "%Y-%m-%d";
-        time = "%H:%M";
-        label = "%date% %time%";
-      };
-      "module/i3" = {
-        type = "internal/i3";
-        scroll-up = "i3wm-wsnext";
-        scroll-down = "i3wm-wsprev";
-      };
-    };
-    script = ''
-    polybar top &
-    '';
-  };
-
-#  services.gpg-agent.enable = true;
-#  services.gpg-agent.pinentryFlavor = "tty";
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
