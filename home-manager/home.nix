@@ -40,6 +40,8 @@
 
   services.dunst.enable = true;
 
+  services.gnupg.enable = true;
+
   services.polybar = {
     enable = true;
     package = pkgs.polybar.override {
