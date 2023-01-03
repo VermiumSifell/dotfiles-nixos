@@ -41,7 +41,6 @@ let
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
 
     nixpkgs-fmt
-    zsh
   ];
 in
 {
@@ -79,9 +78,6 @@ in
   fonts.fontconfig.enable = true;
   programs.git.enable = true;
   services.dunst.enable = true;
-
-  programs.bash.enable = true;
-  programs.zsh.enable = true;
 }
 
 

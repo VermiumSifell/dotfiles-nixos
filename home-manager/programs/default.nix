@@ -3,4 +3,5 @@
   ./gpg
   ./htop
   ./starship
+  ./shells
 ]
