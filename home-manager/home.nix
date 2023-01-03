@@ -39,6 +39,8 @@ let
     speedcrunch # A fast power user calculator
     vlc # Cross-platform media player and streaming server
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
+
+    nixpkgs-fmt
   ];
 in
 {
