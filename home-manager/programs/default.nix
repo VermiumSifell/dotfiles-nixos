@@ -2,5 +2,4 @@
   ./alacritty
   ./gpg
   ./htop
-  ./steam
 ]
