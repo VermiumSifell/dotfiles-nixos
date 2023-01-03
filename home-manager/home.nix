@@ -80,6 +80,7 @@ in
   programs.git.enable = true;
   services.dunst.enable = true;
 
+  programs.bash.enable = true;
 }
 
 
