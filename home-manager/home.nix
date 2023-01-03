@@ -87,7 +87,6 @@ in
           "eDP-1-0" = {
               enable = true;
               mode = "1920x1080";
-              primary = true;
               position = "1920x0";
               rate = "60.00";
               crtc = 1;
