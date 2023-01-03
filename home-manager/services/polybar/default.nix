@@ -28,21 +28,21 @@ in
       githubSupport = true;
     };
     config = ./config.ini;
-    extraConfig =
-      battery +
-      bspwm +
-      cpu +
-      date +
-      eth +
-      filesystem +
-      i3 +
-      memory +
-      network-base +
-      pulseaudio +
-      wlan +
-      xkeyboard +
-      xwindow +
-      xworkspaces;
+    extraConfig =[
+      battery
+      bspwm
+      cpu
+      date
+      eth
+      filesystem
+      i3
+      memory
+      network-base
+      pulseaudio
+      wlan
+      xkeyboard
+      xwindow
+      xworkspaces;]
     script = ''
       polybar top &
     '';
