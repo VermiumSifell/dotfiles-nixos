@@ -7,7 +7,7 @@
       iwSupport = true;
       githubSupport = true;
     };
-    config = ./config.ini
+    config = ./config.ini;
     script = ''
     polybar top &
     '';
