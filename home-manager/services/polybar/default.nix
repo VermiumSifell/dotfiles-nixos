@@ -28,7 +28,7 @@ in
       githubSupport = true;
     };
     config = ./config.ini;
-    extraConfig = [
+    extraConfig = builtins.concatLists; [
       battery
       bspwm
       cpu
