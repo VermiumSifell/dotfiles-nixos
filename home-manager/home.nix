@@ -94,7 +94,6 @@ in
 
           echo "Xft.dpi: $DPI" | ${pkgs.xorg.xrdb}/bin/xrdb -merge
         ''
-          };
       };
     };
 
