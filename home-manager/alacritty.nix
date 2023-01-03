@@ -12,6 +12,21 @@
           background = "#2e3440";
           foreground = "#d8dee9";
         };
+
+        cursor = {
+          text = "#2e3440";
+          cursor = "#d8dee9";
+        };
+
+        vi_mode_cursor = {
+          text = "#2e3440";
+          cursor = "#d8dee9";
+        };
+
+        selection = {
+          text = "CellForeground";
+          background = "#4c566a";
+        };
       };
 
       window = {
