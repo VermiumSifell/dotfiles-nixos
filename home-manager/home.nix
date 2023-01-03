@@ -73,8 +73,7 @@ in
 
   programs.autorandr = {
     enable = true;
-    hooks = {
-      postswitch = {
+    hooks.postswitch = {
         "notify-i3" = "${pkgs.i3}/bin/i3-msg restart";
         "change-background" = readFile ./change-background.sh;
         "change-dpi" = ''
