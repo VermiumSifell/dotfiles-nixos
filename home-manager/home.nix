@@ -71,29 +71,57 @@ in
     };
   };
 
-  home = {
-    inherit username homeDirectory;
-    stateVersion = "22.05";
+  programs.autorandr = {
+    enable = true;
+    hooks = {
+      postswitch = {
+        "notify-i3" = "${pkgs.i3}/bin/i3-msg restart";
+        "change-background" = readFile ./change-background.sh;
+        "change-dpi" = ''
+          case "$AUTORANDR_CURRENT_PROFILE" in
+            default)
+              DPI=120
+              ;;
+            home)
+              DPI=192
+              ;;
+            work)
+              DPI=144
+              ;;
+            *)
+              echo "Unknown profile: $AUTORANDR_CURRENT_PROFILE"
+              exit 1
+          esac
 
-    packages = defaultPkgs;
-
-    sessionVariables = {
-      DISPLAY = ":0";
-      EDITOR = "nvim";
+          echo "Xft.dpi: $DPI" | ${pkgs.xorg.xrdb}/bin/xrdb -merge
+        ''
+          };
+      };
     };
-  };
 
-  # restart services on change
-  systemd.user.startServices = "sd-switch";
+    home = {
+      inherit username homeDirectory;
+      stateVersion = "22.05";
 
-  # notifications about home-manager news
-  news.display = "silent";
+      packages = defaultPkgs;
+
+      sessionVariables = {
+        DISPLAY = ":0";
+        EDITOR = "nvim";
+      };
+    };
+
+    # restart services on change
+    systemd.user.startServices = "sd-switch";
+
+    # notifications about home-manager news
+    news.display = "silent";
 
 
-  fonts.fontconfig.enable = true;
-  programs.git.enable = true;
-  services.dunst.enable = true;
-}
+    fonts.fontconfig.enable = true;
+    programs.git.enable = true;
+    services.dunst.enable = true;
+  }
 
 
 
