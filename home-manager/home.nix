@@ -93,7 +93,7 @@ in
           esac
 
           echo "Xft.dpi: $DPI" | ${pkgs.xorg.xrdb}/bin/xrdb -merge
-        ''
+        '';
       };
     };
 
