@@ -1,4 +1,5 @@
 [
   ./alacritty
   ./gpg
+  ./htop
 ]
