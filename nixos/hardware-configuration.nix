@@ -65,8 +65,7 @@
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   hardware.nvidia.prime = {
-    offload.enable = true;
-    #sync.enable = true;
+    sync.enable = true;
 
     # Bus ID of the NVIDIA GPU. You can find it using lspci, either under 3D or VGA
     nvidiaBusId = "PCI:1:0:0";
