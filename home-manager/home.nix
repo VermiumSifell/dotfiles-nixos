@@ -76,14 +76,14 @@ in
     profiles = {
       AxelLaptop01v1 = {
         config = {
-          "HDMI-0" = {
+          "eDP-1-0" = {
               enable = true;
               mode = "1920x1080";
               primary = true;
               position = "0x0";
               rate = "60.00";
           };
-          "eDP-1-0" = {
+          "HDMI-0" = {
               enable = true;
               mode = "1920x1080";
               position = "1920x0";
