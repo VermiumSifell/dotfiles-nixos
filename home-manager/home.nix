@@ -81,6 +81,7 @@ in
   services.dunst.enable = true;
 
   programs.bash.enable = true;
+  programs.zsh.enable = true;
 }
 
 
