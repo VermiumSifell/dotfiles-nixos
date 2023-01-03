@@ -54,6 +54,13 @@ in
   xdg = {
     inherit configHome;
     enable = true;
+
+    configFIle = {
+      "i3" = {
+        source = ./configs/i3;
+      recursive = true;
+      };
+    };
   };
 
   home = {
