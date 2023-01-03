@@ -64,6 +64,10 @@ in
         source = ./configs/rofi;
         recursive = true;
       };
+      "dunst" = {
+        source = ./configs/dunst;
+        recursive = true;
+      };
     };
   };
 
