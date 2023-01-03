@@ -86,6 +86,8 @@
     ];
   };
 
+  programs.slock.enable = true;
+
   services.xserver.layout = "se";
 
   # Enable the Plasma 5 Desktop Environment.
