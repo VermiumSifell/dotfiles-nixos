@@ -63,6 +63,12 @@
   # Enable i3wm.
   environment.pathsToLink = [ "/libexec" ]; # links /libexec from derivations to /run/current-system/sw 
 
+  services.xserver.libinput = {
+    enable = true;
+    touchpad.tapping = false;
+  };
+
+
   services.xserver.desktopManager = {
     xterm.enable = false;
   };
