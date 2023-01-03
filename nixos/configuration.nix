@@ -83,6 +83,12 @@
       dmenu
       libnotify
       slock
+      playerctl
+      rofi
+      rofi-bluetooth
+      clipmenu
+      brightnessctl
+      feh
     ];
   };
 
