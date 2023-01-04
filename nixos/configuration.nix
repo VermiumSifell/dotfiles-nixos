@@ -89,6 +89,7 @@
       clipmenu
       brightnessctl
       feh
+      pulseaudio
     ];
   };
 
