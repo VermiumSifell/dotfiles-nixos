@@ -22,13 +22,14 @@ in {
         system = "x86_64-linux";
 
         modules = [
-          ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
+          ({ config, pkgs, gtk-theme, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
           ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.vermium = import ./home-manager/home.nix { inherit gtk-theme config pkgs stdenv; };
+            home-manager.users.vermium = import ./home-manager/home.nix;
+# { inherit gtk-theme config pkgs stdenv; };
           }
         ];
       };
