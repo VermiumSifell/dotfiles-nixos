@@ -21,8 +21,6 @@ in {
       AxelLaptop01-nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-      specialArgs = attrs // { inherit gtk-theme; };
-
         modules = [
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
           ./nixos/configuration.nix
@@ -30,7 +28,7 @@ in {
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.vermium = import ./home-manager/home.nix;
+            home-manager.users.vermium = import ./home-manager/home.nix { inherit gtk-theme };
           }
         ];
       };
