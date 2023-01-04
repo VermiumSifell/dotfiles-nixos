@@ -8,7 +8,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, nur, home-manager, ... }: {
+  outputs = inputs@{ nixpkgs, nur, home-manager, ... }:
 let 
 
       gtk-theme = {
@@ -33,5 +33,4 @@ in {
         ];
       };
     };
-  };
 };}
