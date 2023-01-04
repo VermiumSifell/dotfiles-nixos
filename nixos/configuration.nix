@@ -91,8 +91,8 @@
 
     bluetooth.enable = true;
 
-    hardware.opengl.enable = true;
-    hardware.opengl.driSupport32Bit = true;
+    opengl.enable = true;
+    opengl.driSupport32Bit = true;
 
   };
 
