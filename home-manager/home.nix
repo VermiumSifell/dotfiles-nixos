@@ -41,6 +41,7 @@ let
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
 
     nixpkgs-fmt # Nix code formatter for nixpkgs
+    schema # LOL
   ];
 in
 {
