@@ -169,6 +169,10 @@ in
   news.display = "silent";
 
 
+  services.gnome-keyring = {
+    enable = true;
+  };
+
   fonts.fontconfig.enable = true;
   programs.git.enable = true;
   services.dunst.enable = true;
