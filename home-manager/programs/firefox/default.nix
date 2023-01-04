@@ -36,6 +36,9 @@
             # Disable site reading installed plugins.
             "plugins.enumerable_names" = "";
 
+            # Enable auto scrolling.
+            "general.autoScroll" = true;
+
             # Remove those extra empty spaces in both sides
             "browser.uiCustomization.state" = ''
               {"placements":{"widget-overflow-fixed-list":[],"nav-bar":["back-button","forward-button","stop-reload-button","urlbar-container","downloads-button","fxa-toolbar-menu-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"PersonalToolbar":["import-button","personal-bookmarks"]},"seen":["developer-button"],"dirtyAreaCache":["nav-bar","PersonalToolbar"],"currentVersion":17,"newElementCount":4}
