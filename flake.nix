@@ -21,7 +21,7 @@ in {
       AxelLaptop01-nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-      specialArgs = attrs // { inherit wallpaper; inherit gtk-theme; };
+      specialArgs = inputs // { inherit gtk-theme; };
 
         modules = [
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
