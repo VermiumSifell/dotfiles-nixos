@@ -10,16 +10,17 @@
 
   outputs = { nixpkgs, nur, home-manager, ... }@attrs:
 let 
+        system = "x86_64-linux";
 
       gtk-theme = {
         name = "Materia-dark";
-        package = nixpkgs.materia-theme;
+        package = nixpkgs.legacyPackages.${system}.materia-theme;
       };
 
 in {
     nixosConfigurations = {
       AxelLaptop01-nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
 
         modules = [
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
