@@ -172,7 +172,7 @@ in
     packages = defaultPkgs;
 
     file = {
-      ".my-emacs/" = {
+      ".my-emacs" = {
         source = ./homes/.my-emacs;
         recursive = true;
       };
@@ -182,7 +182,7 @@ in
       ".emacs-profile" = {
         source = ./homes/.emacs-profile;
       };
-      ".emacs.d/" = {
+      ".emacs.d" = {
         source = ./homes/.emacs.d;
         recursive = true;
       };
