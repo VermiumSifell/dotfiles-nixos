@@ -15,6 +15,7 @@
     ./hardware-configuration.nix
 
     ./services.nix
+    ./programs.nix
   ];
 
   nixpkgs = {
@@ -60,20 +61,6 @@
 
   # Enable i3wm.
   environment.pathsToLink = [ "/libexec" ]; # links /libexec from derivations to /run/current-system/sw 
-
-  programs = {
-    slock = {
-      enable = true;
-    };
-
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    };
-
-    dconf = { enable = true; };
-  };
 
   users.users = {
     vermium = {
