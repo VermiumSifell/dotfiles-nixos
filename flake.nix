@@ -6,11 +6,16 @@
     nur.url = "github:nix-community/nur";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    schema.url = "git+ssh://git@git.nahfe.xyz/NTI/schema.git";
   };
 
   outputs = { nixpkgs, nur, home-manager, ... }@attrs:
     let
       system = "x86_64-linux";
+
+      overlay-packages = self: super: {
+        schema = schema.packages.${system}.default;
+      };
 
       gtk-theme = {
         name = "Materia-dark";
@@ -24,7 +29,7 @@
           inherit system;
 
           modules = [
-            ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
+            ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay overlay-packages ]; })
             ./nixos/configuration.nix
             home-manager.nixosModules.home-manager
             {
