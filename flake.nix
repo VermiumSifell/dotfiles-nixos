@@ -19,8 +19,6 @@ let
 in {
     nixosConfigurations = {
       AxelLaptop01-nixos = nixpkgs.lib.nixosSystem {
- inherit gtk-theme;
-
         system = "x86_64-linux";
 
         modules = [
