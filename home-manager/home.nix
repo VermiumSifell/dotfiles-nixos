@@ -171,6 +171,13 @@ in
 
     packages = defaultPkgs;
 
+    file = {
+      ".my-emacs" = {
+        source = ./homes/.my-emacs;
+        recursive = true;
+      };
+    };
+
     sessionVariables = {
       DISPLAY = ":0";
       EDITOR = "nvim";
