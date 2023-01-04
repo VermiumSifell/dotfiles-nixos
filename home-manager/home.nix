@@ -71,6 +71,19 @@ in
     };
   };
 
+  gtk = {
+    enable = true;
+    theme = gtk-theme;
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
+  };
+  qt = {
+    enable = true;
+    style = {
+      name = "adwaita-dark";
+      package = pkgs.adwaita-qt;
+    };
+  };
+
   programs.autorandr = {
     enable = true;
     profiles = {
