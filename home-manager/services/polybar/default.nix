@@ -26,6 +26,7 @@ in
       alsaSupport = true;
       iwSupport = true;
       githubSupport = true;
+      pulseSupport = true;
     };
     config = ./config.ini;
     extraConfig =
