@@ -13,12 +13,13 @@
       AxelLaptop01-nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-nixpkgs nur.overlay overlay-packages overlay-plymouth webcord.overlays.default ]; })
           ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.vermium = import ./home-manager/home.nix { inherit nur };
+            home-manager.users.vermium = import ./home-manager/home.nix;
           }
         ];
       };
