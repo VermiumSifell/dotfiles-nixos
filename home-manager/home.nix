@@ -38,9 +38,24 @@ let
     vim # The most popular clone of the VI editor
     speedcrunch # A fast power user calculator
     vlc # Cross-platform media player and streaming server
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
-
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ]; }) # Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts
     nixpkgs-fmt # Nix code formatter for nixpkgs
+    nmap # A free and open source utility for network discovery and security auditing
+    networkmanagerapplet
+    wget
+    pavucontrol
+    lutris
+    ripgrep
+    unzip
+    virt-manager
+    xclip
+    maim
+    qbittorrent
+    s3cmd
+    wireguard-tools
+    tmux
+    inetutils
+    ipcalc
   ];
 in
 {
