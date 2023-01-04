@@ -8,7 +8,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, nur, home-manager, ... }:
+  outputs = { nixpkgs, nur, home-manager, ... }@attrs:
 let 
 
       gtk-theme = {
@@ -21,7 +21,7 @@ in {
       AxelLaptop01-nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-      specialArgs = inputs // { inherit gtk-theme; };
+      specialArgs = attrs // { inherit gtk-theme; };
 
         modules = [
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
