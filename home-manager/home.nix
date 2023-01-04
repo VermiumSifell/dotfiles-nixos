@@ -165,6 +165,12 @@ in
     };
   };
 
+  programs.emacs = {
+    extraPackages = epkgs: [
+      pkgs.mu
+    ];
+  };
+
   home = {
     inherit username homeDirectory;
     stateVersion = "22.05";
