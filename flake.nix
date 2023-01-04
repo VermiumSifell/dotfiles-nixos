@@ -13,7 +13,7 @@ let
 
       gtk-theme = {
         name = "Materia-dark";
-        package = nixpkgs.legacyPackages.${system}.materia-theme;
+        package = nixpkgs.materia-theme;
       };
 
 in {
