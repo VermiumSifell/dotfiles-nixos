@@ -4,4 +4,5 @@
   ./htop
   ./starship
   ./shells
+  ./firefox
 ]
