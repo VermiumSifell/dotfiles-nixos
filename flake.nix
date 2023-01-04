@@ -13,7 +13,7 @@
       AxelLaptop01-nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-nixpkgs nur.overlay overlay-packages overlay-plymouth webcord.overlays.default ]; })
+          ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
           ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
           {
