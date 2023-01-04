@@ -90,6 +90,10 @@
     };
 
     bluetooth.enable = true;
+
+    hardware.opengl.enable = true;
+    hardware.opengl.driSupport32Bit = true;
+
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
