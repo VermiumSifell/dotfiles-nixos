@@ -56,7 +56,7 @@ let
     tmux
     inetutils
     ipcalc
-    rofimoji
+    rofi-emoji
     rofi-calc
   ];
 in
