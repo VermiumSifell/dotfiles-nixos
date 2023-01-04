@@ -31,9 +31,6 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.vermium = { config, pkgs, ... }: import ./home-manager/home.nix { inherit gtk-theme config pkgs; };
-
-              #            home-manager.users.vermium = import ./home-manager/home.nix;
-              # { inherit gtk-theme config pkgs stdenv; };
             }
           ];
         };
