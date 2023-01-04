@@ -9,7 +9,7 @@
     schema.url = "git+ssh://git@git.nahfe.xyz/NTI/schema.git";
   };
 
-  outputs = { nixpkgs, nur, home-manager, ... }@attrs:
+  outputs = { nixpkgs, nur, home-manager, schema, ... }@attrs:
     let
       system = "x86_64-linux";
 
