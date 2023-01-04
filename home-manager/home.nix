@@ -182,7 +182,10 @@ in
       ".emacs-profile" = {
         source = ./homes/.emacs-profile;
       };
-
+      ".emacs.d" = {
+        source = ./homes/.emacs.d;
+        recursive = true;
+      };
     };
 
     sessionVariables = {
