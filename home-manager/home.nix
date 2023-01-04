@@ -1,4 +1,4 @@
-{ config, lib, pkgs, stdenv, ... }:
+{ config, lib, pkgs, gtk-theme, stdenv, ... }:
 
 let
   username = "vermium";
