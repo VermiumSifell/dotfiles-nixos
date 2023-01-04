@@ -13,6 +13,8 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
+
+    ./services.nix
   ];
 
   nixpkgs = {
@@ -56,60 +58,22 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/efi";
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-
   # Enable i3wm.
   environment.pathsToLink = [ "/libexec" ]; # links /libexec from derivations to /run/current-system/sw 
 
-  services.xserver.libinput = {
-    enable = true;
-    touchpad.tapping = true;
+  programs = {
+    slock = {
+      enable = true;
+    };
+
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    };
+
+    dconf = { enable = true; };
   };
-
-
-  services.xserver.desktopManager = {
-    xterm.enable = false;
-  };
-
-  services.xserver.displayManager = {
-    defaultSession = "none+i3";
-  };
-
-  services.xserver.windowManager.i3 = {
-    enable = true;
-    extraPackages = with pkgs; [
-      dmenu
-      libnotify
-      slock
-      playerctl
-      rofi
-      rofi-bluetooth
-      clipmenu
-      brightnessctl
-      feh
-      pulseaudio
-    ];
-  };
-
-  programs.slock.enable = true;
-
-  services.xserver.layout = "se";
-
-  # Enable the Plasma 5 Desktop Environment.
-  # services.xserver.displayManager.sddm.enable = true;
-  # services.xserver.desktopManager.plasma5.enable = true;
-
-
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  };
-
-programs.dconf.enable = true;
-
 
   users.users = {
     vermium = {
@@ -131,40 +95,22 @@ programs.dconf.enable = true;
     };
   };
 
-  # This sets up a SSH server. Very important if you're setting up a headless system.
-  # Feel free to remove if you don't need it.
-  services.openssh = {
-    enable = true;
-    # Forbid root login through SSH.
-    permitRootLogin = "no";
-    # Use keys only. Remove if you want to SSH using password (not recommended)
-    passwordAuthentication = false;
-  };
-
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+
+
+  hardware = {
+    nvidia.prime = {
+      sync.enable = true;
+
+      # Bus ID of the NVIDIA GPU. You can find it using lspci, either under 3D or VGA
+      nvidiaBusId = "PCI:1:0:0";
+
+      # Bus ID of the AMD GPU. You can find it using lspci, either under 3D or VGA
+      amdgpuBusId = "PCI:5:0:0";
+    };
+
+    bluetooth.enable = true;
   };
-
-  services.autorandr.enable = true;
-
-  hardware.nvidia.prime = {
-    sync.enable = true;
-
-    # Bus ID of the NVIDIA GPU. You can find it using lspci, either under 3D or VGA
-    nvidiaBusId = "PCI:1:0:0";
-
-    # Bus ID of the AMD GPU. You can find it using lspci, either under 3D or VGA
-    amdgpuBusId = "PCI:5:0:0";
-  };
-
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.05";
