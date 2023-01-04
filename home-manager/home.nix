@@ -176,6 +176,13 @@ in
         source = ./homes/.my-emacs;
         recursive = true;
       };
+      ".emacs-profiles.el" = {
+        source = ./homes/.emacs-profiles.el;
+      };
+      ".emacs-profile" = {
+        source = ./homes/.emacs-profile;
+      };
+
     };
 
     sessionVariables = {
