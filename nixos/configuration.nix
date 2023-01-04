@@ -150,6 +150,18 @@
 
   services.autorandr.enable = true;
 
+  hardware.nvidia.prime = {
+    sync.enable = true;
+
+    # Bus ID of the NVIDIA GPU. You can find it using lspci, either under 3D or VGA
+    nvidiaBusId = "PCI:1:0:0";
+
+    # Bus ID of the AMD GPU. You can find it using lspci, either under 3D or VGA
+    amdgpuBusId = "PCI:5:0:0";
+  };
+
+  hardware.bluetooth.enable = true;
+
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.05";

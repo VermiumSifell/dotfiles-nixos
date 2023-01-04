@@ -40,7 +40,7 @@ let
     vlc # Cross-platform media player and streaming server
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
 
-    nixpkgs-fmt
+    nixpkgs-fmt # Nix code formatter for nixpkgs
   ];
 in
 {
