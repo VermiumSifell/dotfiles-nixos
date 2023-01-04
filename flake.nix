@@ -6,7 +6,7 @@
     nur.url = "github:nix-community/nur";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    schema.url = "git+ssh://git@git.nahfe.xyz:NTI/schema.git";
+    schema.url = "git+ssh://git@git.nahfe.xyz/NTI/schema.git";
   };
 
   outputs = { nixpkgs, nur, home-manager, schema, ... }@attrs:
