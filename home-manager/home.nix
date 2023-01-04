@@ -90,17 +90,17 @@ in
       AxelLaptop01v1 = {
         config = {
           "eDP-1-0" = {
-              enable = true;
-              mode = "1920x1080";
-              primary = true;
-              position = "0x0";
-              rate = "60.00";
+            enable = true;
+            mode = "1920x1080";
+            primary = true;
+            position = "0x0";
+            rate = "60.00";
           };
           "HDMI-0" = {
-              enable = true;
-              mode = "1920x1080";
-              position = "1920x0";
-              rate = "60.00";
+            enable = true;
+            mode = "1920x1080";
+            position = "1920x0";
+            rate = "60.00";
           };
         };
         fingerprint = {
@@ -111,14 +111,14 @@ in
       AxelLaptop01v2 = {
         config = {
           "eDP-1-0" = {
-              enable = true;
-              mode = "1920x1080";
-              primary = true;
-              position = "0x0";
-              rate = "60.00";
+            enable = true;
+            mode = "1920x1080";
+            primary = true;
+            position = "0x0";
+            rate = "60.00";
           };
           "HDMI-0" = {
-              enable = false;
+            enable = false;
           };
         };
         fingerprint = {
@@ -128,51 +128,51 @@ in
 
     };
     hooks.postswitch = {
-        "notify-i3" = "${pkgs.i3}/bin/i3-msg restart";
-        "change-dpi" = ''
-          case "$AUTORANDR_CURRENT_PROFILE" in
-            default)
-              DPI=120
-              ;;
-            home)
-              DPI=192
-              ;;
-            work)
-              DPI=144
-              ;;
-            *)
-              echo "Unknown profile: $AUTORANDR_CURRENT_PROFILE"
-              exit 1
-          esac
+      "notify-i3" = "${pkgs.i3}/bin/i3-msg restart";
+      "change-dpi" = ''
+        case "$AUTORANDR_CURRENT_PROFILE" in
+          default)
+            DPI=120
+            ;;
+          home)
+            DPI=192
+            ;;
+          work)
+            DPI=144
+            ;;
+          *)
+            echo "Unknown profile: $AUTORANDR_CURRENT_PROFILE"
+            exit 1
+        esac
 
-          echo "Xft.dpi: $DPI" | ${pkgs.xorg.xrdb}/bin/xrdb -merge
-        '';
-      };
+        echo "Xft.dpi: $DPI" | ${pkgs.xorg.xrdb}/bin/xrdb -merge
+      '';
     };
+  };
 
-    home = {
-      inherit username homeDirectory;
-      stateVersion = "22.05";
+  home = {
+    inherit username homeDirectory;
+    stateVersion = "22.05";
 
-      packages = defaultPkgs;
+    packages = defaultPkgs;
 
-      sessionVariables = {
-        DISPLAY = ":0";
-        EDITOR = "nvim";
-      };
+    sessionVariables = {
+      DISPLAY = ":0";
+      EDITOR = "nvim";
     };
+  };
 
-    # restart services on change
-    systemd.user.startServices = "sd-switch";
+  # restart services on change
+  systemd.user.startServices = "sd-switch";
 
-    # notifications about home-manager news
-    news.display = "silent";
+  # notifications about home-manager news
+  news.display = "silent";
 
 
-    fonts.fontconfig.enable = true;
-    programs.git.enable = true;
-    services.dunst.enable = true;
-  }
+  fonts.fontconfig.enable = true;
+  programs.git.enable = true;
+  services.dunst.enable = true;
+}
 
 
 
