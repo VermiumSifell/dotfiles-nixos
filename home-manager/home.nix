@@ -58,6 +58,7 @@ let
     ipcalc
     rofi-emoji
     rofi-calc
+    protontricks
   ];
 in
 {
