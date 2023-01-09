@@ -32,7 +32,7 @@
             modules = [
               {
                 imports = [
-                  nur-modules.repos.paul.modules.foo
+                  nur.repos.paul.modules.foo
                   ./system/configuration.nix
                   home-manager.nixosModules.home-manager
                   {
