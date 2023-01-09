@@ -1,4 +1,4 @@
-{ inputs, system,home-manager, ... }:
+{ inputs, system,home-manager,gtk-theme ... }:
 
 let
   nixosSystem = inputs.nixpkgs.lib.nixosSystem;
