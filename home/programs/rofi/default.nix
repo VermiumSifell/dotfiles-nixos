@@ -8,6 +8,7 @@
     plugins = with pkgs; [
       rofi-calc
       rofi-emoji
+      haskellPackages.greenclip
     ];
   };
 }
