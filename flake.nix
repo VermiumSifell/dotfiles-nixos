@@ -25,20 +25,36 @@
     in
     {
       nixosConfigurations = {
-        AxelLaptop01 = nixpkgs.lib.nixosSystem {
-          inherit system;
+        AxelLaptop01 = nixpkgs.lib.nixosSystem
+          {
+            inherit system;
 
-          modules = [
-            nur.nixosModules.nur
-            ./system/configuration.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.vermium = { config, pkgs, ... }: import ./home/home.nix { inherit gtk-theme config pkgs; };
-            }
-          ];
-        };
+            modules =
+              let
+                nur-modules = import nur {
+                  nurpkgs = nixpkgs.legacyPackages.x86_64-linux;
+                  pkgs = nixpkgs.legacyPackages.x86_64-linux;
+                };
+              in
+              [
+                {
+                  imports = [
+                    nur-modules.repos.paul.modules.foo
+                    ./system/configuration.nix
+                    home-manager.nixosModules.home-manager
+                    {
+                      home-manager.useGlobalPkgs = true;
+                      home-manager.useUserPackages = true;
+                      home-manager.users.vermium = { config, pkgs, ... }: import ./home/home.nix { inherit gtk-theme config pkgs; };
+                    }
+
+
+                  ];
+                }
+              ];
+
+
+          };
       };
     };
 }
