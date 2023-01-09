@@ -228,6 +228,7 @@ in
       DISPLAY = ":0";
       EDITOR = "nvim";
       DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
+      MOZ_USE_XINPUT2 = "1";
     };
   };
 
