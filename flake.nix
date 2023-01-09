@@ -19,7 +19,7 @@
     {
       nixosConfigurations = (
         import ./outputs/nixos-conf.nix {
-          inherit inputs system;
+          inherit inputs system home-manager;
         }
       );
     };
