@@ -43,7 +43,7 @@
 
     extraHosts =
       ''
-        127.0.0.3 AxelLaptop01-nixos.localhost
+        127.0.0.3 AxelLaptop01-nixos.com.se
     '';
 
   };
