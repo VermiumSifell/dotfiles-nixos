@@ -245,12 +245,3 @@ in
   programs.git.enable = true;
   services.dunst.enable = true;
 }
-
-
-
-
-#  imports = [
-#    ./gnupg.nix
-#    ./polybar.nix
-#    ./alacritty.nix
-#  ];
