@@ -70,6 +70,8 @@ in
     ./services
   ];
 
+  services.greenclip.enable=true;
+
   xdg = {
     inherit configHome;
     enable = true;
