@@ -1,4 +1,4 @@
-{ inputs, system, ... }:
+{ inputs, config, system, ... }:
 
 with inputs;
 
