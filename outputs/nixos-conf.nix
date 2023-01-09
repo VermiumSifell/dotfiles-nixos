@@ -5,7 +5,7 @@ with inputs;
 let
   nixosSystem = inputs.nixpkgs.lib.nixosSystem;
 
-  nixpkgs.overlays = [ nur.overlay ];
+  nixpkgs.overlays = [ inputs.nur.overlay ];
 
 in
 {
