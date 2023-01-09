@@ -60,6 +60,7 @@ let
     # rofi-calc
     protontricks
     openssl
+    direnv
   ];
 in
 {
