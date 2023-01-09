@@ -29,6 +29,7 @@
           brightnessctl
           feh
           pulseaudio
+          rofi-bluetooth
         ];
       };
     };
