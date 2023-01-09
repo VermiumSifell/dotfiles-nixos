@@ -1,4 +1,4 @@
-{ inputs, system,home-manager,gtk-theme, ... }:
+{ inputs, system, home-manager, gtk-theme, ... }:
 
 let
   nixosSystem = inputs.nixpkgs.lib.nixosSystem;
@@ -14,7 +14,7 @@ in
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.users.vermium = { config, pkgs, ... }: import ./home/home.nix { inherit gtk-theme config pkgs; };
+        home-manager.users.vermium = { config, pkgs, ... }: import ./home/home.nix;
       }
     ];
   };
