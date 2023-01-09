@@ -36,7 +36,7 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
         };
       in [
-       { imports = [ nur-modules ]; }
+       { imports = [ nur-modules.repos.paul ]; }
       ];
 
             # modules = [
