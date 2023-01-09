@@ -62,14 +62,14 @@ let
     openssl
     direnv
   ];
+
+  gtk-theme = {
+    name = "Materia-dark";
+    package = nixpkgs.legacyPackages.${system}.materia-theme;
+  };
+
 in
 {
-
-    gtk-theme = {
-      name = "Materia-dark";
-      package = nixpkgs.legacyPackages.${system}.materia-theme;
-    };
-
   programs.home-manager.enable = true;
 
   imports = builtins.concatMap import [
