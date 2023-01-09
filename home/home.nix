@@ -55,6 +55,7 @@ let
     wireguard-tools
     tmux
     inetutils
+    greenclip
     ipcalc
     # rofi-emoji
     # rofi-calc
