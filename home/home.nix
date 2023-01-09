@@ -1,4 +1,4 @@
-{ config, pkgs, system, ... }:
+{ inputs, config, pkgs, system, ... }:
 
 let
   username = "vermium";
@@ -65,7 +65,7 @@ let
 
   gtk-theme = {
     name = "Materia-dark";
-    package = pkgs.legacyPackages.${system}.materia-theme;
+    package = inputs.nixpkgs.legacyPackages.${system}.materia-theme;
   };
 
 in
