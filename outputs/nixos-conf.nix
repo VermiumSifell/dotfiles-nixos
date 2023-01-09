@@ -10,7 +10,7 @@ let
 in
 {
   AxelLaptop01 = nixosSystem {
-    inherit system config pkgs;
+    inherit system;
 
     specialArgs = { inherit inputs; };
     modules = [
