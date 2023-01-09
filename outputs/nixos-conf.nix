@@ -3,6 +3,7 @@
 let
   nixosSystem = inputs.nixpkgs.lib.nixosSystem;
   home-manager = inputs.home-manager;
+  nur = inputs.nur;
 
     gtk-theme = {
       name = "Materia-dark";
