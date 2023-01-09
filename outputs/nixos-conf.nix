@@ -8,7 +8,7 @@ in
     inherit system;
     specialArgs = { inherit inputs; };
     modules = [
-      ../system/machine/dell-xps
+      ../system/machine/AxelLaptop01
       ../system/configuration.nix
     ];
   };
