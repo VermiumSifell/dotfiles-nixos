@@ -25,6 +25,8 @@
   # Enable i3wm.
   environment.pathsToLink = [ "/libexec" ]; # links /libexec from derivations to /run/current-system/sw 
 
+  programs.zsh.enable = true;
+
   users.users = {
     vermium = {
       isNormalUser = true;
