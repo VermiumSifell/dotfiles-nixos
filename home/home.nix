@@ -33,7 +33,7 @@ let
     libreoffice # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
     neovim # Vim text editor fork focused on extensibility and agility
     ranger # File manager with minimalistic curses interface
-#    rofi # Window switcher, run dialog and dmenu replacement
+    #    rofi # Window switcher, run dialog and dmenu replacement
     spotify # Play music from the Spotify music service
     vim # The most popular clone of the VI editor
     speedcrunch # A fast power user calculator
@@ -69,7 +69,7 @@ in
     ./programs
     ./services
   ];
-  
+
   xdg = {
     inherit configHome;
     enable = true;
@@ -83,10 +83,10 @@ in
       #   source = ./configs/rofi;
       #   recursive = true;
       # };
-      "dunst" = {
-        source = ./configs/dunst;
-        recursive = true;
-      };
+      # "dunst" = {
+      #   source = ./configs/dunst;
+      #   recursive = true;
+      # };
     };
   };
 
