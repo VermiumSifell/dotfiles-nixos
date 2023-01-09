@@ -84,7 +84,7 @@
   security.rtkit.enable = true;
 
   virtualisation.docker.enable = true;
-  virtualisation.docker.storageDriver = "btrfs"
+  virtualisation.docker.storageDriver = "btrfs";
 
   hardware = {
     nvidia.prime = {
