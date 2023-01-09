@@ -13,11 +13,18 @@
   };
 
   outputs = inputs:
-    let system = "x86_64-linux"; in
+    let
+      system = "x86_64-linux";
+
+      gtk-theme = {
+        name = "Materia-dark";
+        package = nixpkgs.legacyPackages.${system}.materia-theme;
+      };
+    in
     {
       nixosConfigurations = (
         import ./outputs/nixos-conf.nix {
-          inherit inputs system;
+          inherit inputs system home-manager gtk-theme;
         }
       );
     };
