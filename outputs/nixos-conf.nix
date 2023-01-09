@@ -3,7 +3,7 @@
 with inputs;
 
 let
-  nixosSystem = nixpkgs.lib.nixosSystem;
+  nixosSystem = inputs.nixpkgs.lib.nixosSystem;
 
   nixpkgs.overlays = [ nur.overlay ];
 
