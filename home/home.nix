@@ -65,7 +65,7 @@ let
 
   gtk-theme = {
     name = "Materia-dark";
-    package = nixpkgs.legacyPackages.${system}.materia-theme;
+    package = pkgs.legacyPackages.${system}.materia-theme;
   };
 
 in
