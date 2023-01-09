@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, system, ... }:
+{ inputs, pkgs, system, ... }:
 
 let
   username = "vermium";
