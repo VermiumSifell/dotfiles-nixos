@@ -59,6 +59,7 @@ let
     rofi-emoji
     rofi-calc
     protontricks
+    openssl
   ];
 in
 {
