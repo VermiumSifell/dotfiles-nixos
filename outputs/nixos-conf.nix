@@ -2,6 +2,7 @@
 
 let
   nixosSystem = inputs.nixpkgs.lib.nixosSystem;
+  home-manager = inputs.home-manager;
 in
 {
   AxelLaptop01 = nixosSystem {
