@@ -158,7 +158,7 @@ in
             enable = true;
             mode = "1680x1050";
             primary = false;
-            position = "0x0";
+            position = "1920x0";
             rate = "60.00";
           };
         };
