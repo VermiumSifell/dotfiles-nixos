@@ -244,9 +244,7 @@ in
 
   xsession.windowManager.i3 = {
     enable = true;
-    config = {
-      configFile = ./configs/i3/config;
-    };
+    config = ./configs/i3/config;
   };
 
   fonts.fontconfig.enable = true;
