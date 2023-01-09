@@ -1,18 +1,19 @@
 { inputs, system, ... }:
+
 with inputs;
 
 let
   nixosSystem = nixpkgs.lib.nixosSystem;
-
-  gtk-theme = {
-    name = "Materia-dark";
-    package = inputs.nixpkgs.legacyPackages.${system}.materia-theme;
-  };
-
 in
 {
   AxelLaptop01 = nixosSystem {
     inherit system;
+
+    gtk-theme = {
+      name = "Materia-dark";
+      package = nixpkgs.legacyPackages.${system}.materia-theme;
+    };
+
     specialArgs = { inherit inputs; };
     modules = [
       ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
