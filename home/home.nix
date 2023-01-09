@@ -1,4 +1,4 @@
-{ config, pkgs, gtk-theme, ... }:
+{ config, pkgs, ... }:
 
 let
   username = "vermium";
@@ -64,6 +64,12 @@ let
   ];
 in
 {
+
+    gtk-theme = {
+      name = "Materia-dark";
+      package = nixpkgs.legacyPackages.${system}.materia-theme;
+    };
+
   programs.home-manager.enable = true;
 
   imports = builtins.concatMap import [

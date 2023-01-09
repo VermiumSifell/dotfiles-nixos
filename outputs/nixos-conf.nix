@@ -9,11 +9,6 @@ in
   AxelLaptop01 = nixosSystem {
     inherit system;
 
-    gtk-theme = {
-      name = "Materia-dark";
-      package = nixpkgs.legacyPackages.${system}.materia-theme;
-    };
-
     specialArgs = { inherit inputs; };
     modules = [
       ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
