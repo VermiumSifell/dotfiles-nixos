@@ -227,6 +227,7 @@ in
     sessionVariables = {
       DISPLAY = ":0";
       EDITOR = "nvim";
+      DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
     };
   };
 
@@ -242,10 +243,6 @@ in
     components = [ "pkcs11" "secrets" "ssh" ];
   };
 
-  xsession.windowManager.i3 = {
-    enable = true;
-    xdg.configFile = ./configs/i3/config;
-  };
 
   fonts.fontconfig.enable = true;
   programs.git.enable = true;
