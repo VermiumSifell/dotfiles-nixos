@@ -19,7 +19,7 @@ in
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.users.vermium = { config, nixpkgs, ... }: import ../home/home.nix { inherit inputs config nixpkgs system; };
+        home-manager.users.vermium = { config, pkgs, ... }: import ../home/home.nix { inherit inputs config nixpkgs system; };
       }
     ];
   };
