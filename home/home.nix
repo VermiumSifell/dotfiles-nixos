@@ -242,6 +242,11 @@ in
     components = [ "pkcs11" "secrets" "ssh" ];
   };
 
+  xsession.windowManager.i3 = {
+    enable = true;
+    configFile = ./configs/i3/config;
+  };
+
   fonts.fontconfig.enable = true;
   programs.git.enable = true;
 }
