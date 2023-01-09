@@ -63,7 +63,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id "rofi -modi drun,run,window,ssh -show drun"
 
 # Open clipmenu
-bindsym $mod+c exec --no-startup-id "CM_LAUNCHER=rofi clipmenu"
+bindsym $mod+c exec --no-startup-id "rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'"
 
 # Open emoji selector
 bindsym $mod+x exec --no-startup-id "rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C"
