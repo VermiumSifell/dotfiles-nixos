@@ -155,7 +155,11 @@ in
             rate = "60.00";
           };
           "HDMI-0" = {
-            enable = false;
+            enable = true;
+            mode = "1680x1050";
+            primary = false;
+            position = "0x0";
+            rate = "60.00";
           };
         };
         fingerprint = {
