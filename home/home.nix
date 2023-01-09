@@ -91,6 +91,9 @@ in
     };
   };
 
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+
   gtk = {
     enable = true;
     theme = gtk-theme;
