@@ -56,8 +56,8 @@ let
     tmux
     inetutils
     ipcalc
-    rofi-emoji
-    rofi-calc
+    # rofi-emoji
+    # rofi-calc
     protontricks
     openssl
   ];
