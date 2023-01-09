@@ -5,4 +5,5 @@
   ./starship
   ./shells
   ./firefox
+  ./rofi
 ]
