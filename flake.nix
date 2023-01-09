@@ -24,7 +24,7 @@
     in
     {
       nixosConfigurations = {
-        AxelLaptop01-nixos = nixpkgs.lib.nixosSystem {
+        AxelLaptop01 = nixpkgs.lib.nixosSystem {
           inherit system;
 
           modules = [

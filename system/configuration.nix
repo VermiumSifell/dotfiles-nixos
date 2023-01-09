@@ -36,16 +36,10 @@
   };
 
   networking = {
-    hostName = "AxelLaptop01-nixos";
+    hostName = "AxelLaptop01";
     networkmanager = {
       enable = true; # Easiest to use and most distros use this by default.
     };
-
-    extraHosts =
-      ''
-        127.0.0.3 AxelLaptop01-nixos.com.se
-    '';
-
   };
 
   time.timeZone = "Europe/Stockholm";
