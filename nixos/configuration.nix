@@ -40,6 +40,12 @@
     networkmanager = {
       enable = true; # Easiest to use and most distros use this by default.
     };
+
+    extraHosts =
+      ''
+        127.0.0.3 AxelLaptop01-nixos.localhost
+    '';
+
   };
 
   time.timeZone = "Europe/Stockholm";
