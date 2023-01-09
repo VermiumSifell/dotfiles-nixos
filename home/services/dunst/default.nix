@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  programs.dunst = {
+  services.dunst = {
     enable = true;
     configFile = "./dunstrc";
   };
