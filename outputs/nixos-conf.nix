@@ -7,7 +7,7 @@ let
 in
 {
   AxelLaptop01 = nixosSystem {
-    inherit system;
+    inherit system config pkgs;
 
     nixpkgs.overlays = [ nur.overlay ];
 
@@ -19,7 +19,7 @@ in
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.users.vermium = { config, pkgs, ... }: import ../home/home.nix { inherit inputs config nixpkgs system; };
+        home-manager.users.vermium = { config, pkgs, ... }: import ../home/home.nix { inherit inputs config pkgs system; };
       }
     ];
   };
