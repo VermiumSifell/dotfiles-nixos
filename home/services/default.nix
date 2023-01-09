@@ -1,4 +1,5 @@
 [
   ./gpg-agent
   ./polybar
+  ./dunst
 ]

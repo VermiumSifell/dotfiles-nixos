@@ -243,5 +243,4 @@ in
 
   fonts.fontconfig.enable = true;
   programs.git.enable = true;
-  services.dunst.enable = true;
 }
