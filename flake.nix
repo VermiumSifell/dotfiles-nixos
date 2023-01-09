@@ -1,6 +1,7 @@
 {
   description = "Vermium's Home Manager & NixOS configurations";
 
+  # Dependencies
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 

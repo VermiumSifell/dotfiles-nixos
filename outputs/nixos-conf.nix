@@ -1,9 +1,8 @@
 { inputs, system, ... }:
+with inputs;
 
 let
-  nixosSystem = inputs.nixpkgs.lib.nixosSystem;
-  home-manager = inputs.home-manager;
-  nur = inputs.nur;
+  nixosSystem = nixpkgs.lib.nixosSystem;
 
   gtk-theme = {
     name = "Materia-dark";
@@ -17,7 +16,6 @@ in
     specialArgs = { inherit inputs; };
     modules = [
       ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
-
       ../system/machine/AxelLaptop01
       ../system/configuration.nix
       home-manager.nixosModules.home-manager
