@@ -20,7 +20,7 @@
           inherit inputs system;
         }
       );
-    # };
+    };
 
   # outputs = { nixpkgs, nur, home-manager, ... }@attrs:
   #   let
