@@ -15,6 +15,8 @@ in
     inherit system;
     specialArgs = { inherit inputs; };
     modules = [
+                 ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
+
       ../system/machine/AxelLaptop01
       ../system/configuration.nix
                home-manager.nixosModules.home-manager
