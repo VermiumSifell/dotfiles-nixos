@@ -55,7 +55,6 @@ let
     wireguard-tools
     tmux
     inetutils
-    greenclip
     ipcalc
     # rofi-emoji
     # rofi-calc
@@ -70,9 +69,7 @@ in
     ./programs
     ./services
   ];
-
-  services.greenclip.enable=true;
-
+  
   xdg = {
     inherit configHome;
     enable = true;

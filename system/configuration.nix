@@ -15,6 +15,8 @@
 
   time.timeZone = "Europe/Stockholm";
 
+  services.greenclip.enable=true;
+
 
   boot.loader.grub.enable = true;
   boot.loader.grub.efiSupport = true;
