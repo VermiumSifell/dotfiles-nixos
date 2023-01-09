@@ -28,7 +28,7 @@
           inherit system;
 
           modules = [
-            nur.nixosModules.nur
+            ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
             ./system/configuration.nix
             home-manager.nixosModules.home-manager
             {
