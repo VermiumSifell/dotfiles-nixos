@@ -1,4 +1,4 @@
-{ inputs, config, system, ... }:
+{ inputs, system, ... }:
 
 with inputs;
 
@@ -20,7 +20,7 @@ in
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.users.vermium = { config, pkgs, ... }: import ../home/home.nix { inherit inputs config pkgs system; };
+        home-manager.users.vermium = { pkgs, ... }: import ../home/home.nix { inherit inputs pkgs system; };
       }
     ];
   };
