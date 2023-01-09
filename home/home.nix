@@ -1,4 +1,4 @@
-{ inputs, pkgs, system, ... }:
+{ config, pkgs, ... }:
 
 let
   username = "vermium";
@@ -62,12 +62,6 @@ let
     openssl
     direnv
   ];
-
-  gtk-theme = {
-    name = "Materia-dark";
-    package = inputs.nixpkgs.legacyPackages.${system}.materia-theme;
-  };
-
 in
 {
   programs.home-manager.enable = true;
