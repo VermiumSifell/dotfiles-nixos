@@ -83,6 +83,7 @@
 
   security.rtkit.enable = true;
 
+  virtualisation.docker.enable = true;
 
   hardware = {
     nvidia.prime = {
