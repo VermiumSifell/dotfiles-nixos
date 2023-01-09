@@ -4,12 +4,13 @@ with inputs;
 
 let
   nixosSystem = nixpkgs.lib.nixosSystem;
+
+  nixpkgs.overlays = [ nur.overlay ];
+
 in
 {
   AxelLaptop01 = nixosSystem {
     inherit system config pkgs;
-
-    nixpkgs.overlays = [ nur.overlay ];
 
     specialArgs = { inherit inputs; };
     modules = [
