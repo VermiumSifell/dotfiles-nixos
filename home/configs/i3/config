@@ -66,7 +66,7 @@ bindsym $mod+d exec --no-startup-id "rofi -modi drun,run,window,ssh -show drun"
 bindsym $mod+c exec --no-startup-id "CM_LAUNCHER=rofi clipmenu"
 
 # Open emoji selector
-bindsym $mod+x exec --no-startup-id "rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C"
+bindsym $mod+x exec --no-startup-id "rofimoji"
 
 # Open bluetooth
 bindsym $mod+b exec --no-startup-id "rofi-bluetooth"
