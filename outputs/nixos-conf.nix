@@ -6,7 +6,7 @@ in
 {
   AxelLaptop01 = nixosSystem {
     inherit system;
-    specialArgs = { inherit inputs; };
+    specialArgs = { inherit inputs home-manager; };
     modules = [
       ../system/machine/AxelLaptop01
       ../system/configuration.nix
