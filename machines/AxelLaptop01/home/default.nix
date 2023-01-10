@@ -4,6 +4,11 @@ let
   homeDirectory = "/home/${username}";
   configHome = "${homeDirectory}/.config";
 
+  gtk-theme = {
+    name = "Materia-dark";
+    package = nixpkgs.legacyPackages.x86_64-linux.materia-theme;
+  };
+
   defaultPkgs = with pkgs; [
     discord # All-in-one cross-platform voice and text chat for gamers
     firefox # A web browser built from Firefox source tree
