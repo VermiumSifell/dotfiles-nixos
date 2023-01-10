@@ -25,6 +25,13 @@
     {
       nixosConfigurations = {
         AxelLaptop01 = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./machines/AxelLaptop01/configuration.nix
+            ./machines/AxelLaptop01/hardware.nix
+            ./machines/AxelLaptop01/home.nix
+          ];
+        };
+        AxelLaptop01 = nixpkgs.lib.nixosSystem {
           inherit system;
 
           modules = [
@@ -34,10 +41,10 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.vermium = { config, pkgs, ... }: import ./home/home.nix { inherit gtk-theme config pkgs; };
+              home-manager.users.vermium = import ./home/home.nix
+                }
+                ];
+            };
+            };
+            };
             }
-          ];
-        };
-      };
-    };
-}

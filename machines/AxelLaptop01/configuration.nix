@@ -1,8 +1,8 @@
 { inputs, lib, config, pkgs, ... }: {
   imports = [
-    ./hardware-configuration.nix
-    ./services.nix
-    ./programs.nix
+    ./hardware.nix
+    ./mess/services.nix
+    ./mess/programs.nix
   ];
 
   networking = {
