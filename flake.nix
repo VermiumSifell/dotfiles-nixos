@@ -28,7 +28,10 @@
           modules = [
             ./machines/AxelLaptop01/configuration.nix
             ./machines/AxelLaptop01/hardware.nix
-            ./machines/AxelLaptop01/home
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.users.vermium = import ./machines/AxelLaptop01/home;
+            }
           ];
         };
       };
