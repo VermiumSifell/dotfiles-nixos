@@ -12,16 +12,7 @@
     };
   };
 
-  outputs = { nixpkgs, nur, home-manager, ... }@attrs:
-    let
-      system = "x86_64-linux";
-
-      gtk-theme = {
-        name = "Materia-dark";
-        package = nixpkgs.legacyPackages.${system}.materia-theme;
-      };
-
-    in
+  outputs = { self, nixpkgs, ... }@inputs:
     {
       nixosConfigurations = {
         AxelLaptop01 = nixpkgs.lib.nixosSystem {
