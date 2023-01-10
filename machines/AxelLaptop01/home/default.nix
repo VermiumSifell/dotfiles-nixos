@@ -6,7 +6,7 @@ let
 
   gtk-theme = {
     name = "Materia-dark";
-    package = pkgs.legacyPackages.materia-theme;
+    package = pkgs.materia-theme;
   };
 
   defaultPkgs = with pkgs; [
