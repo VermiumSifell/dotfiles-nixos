@@ -19,7 +19,6 @@
           modules = [
             ./machines/AxelLaptop01/configuration.nix
             ./machines/AxelLaptop01/hardware.nix
-            home-manager.nixosModule
             ./machines/AxelLaptop01/home
           ];
         };
