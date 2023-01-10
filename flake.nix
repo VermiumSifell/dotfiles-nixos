@@ -31,20 +31,6 @@
             ./machines/AxelLaptop01/home.nix
           ];
         };
-        AxelLaptop01 = nixpkgs.lib.nixosSystem {
-          inherit system;
-
-          modules = [
-            ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
-            ./system/configuration.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.vermium = import ./home/home.nix
-                }
-                ];
-            };
-            };
-            };
-            }
+      };
+    };
+}
