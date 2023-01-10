@@ -28,7 +28,7 @@
           modules = [
             ./machines/AxelLaptop01/configuration.nix
             ./machines/AxelLaptop01/hardware.nix
-            ./machines/AxelLaptop01/home.nix
+            ./machines/AxelLaptop01/home
           ];
         };
       };
