@@ -1,4 +1,4 @@
-{ config, pkgs, gtk-theme, ... }:
+{ config, pkgs, ... }:
 let
   username = "vermium";
   homeDirectory = "/home/${username}";
@@ -6,7 +6,7 @@ let
 
   gtk-theme = {
     name = "Materia-dark";
-    package = nixpkgs.legacyPackages.x86_64-linux.materia-theme;
+    package = pkgs.legacyPackages.materia-theme;
   };
 
   defaultPkgs = with pkgs; [
