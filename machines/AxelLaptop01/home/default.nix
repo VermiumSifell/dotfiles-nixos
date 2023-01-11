@@ -80,7 +80,7 @@ in
 
     programs.firefox = {
       enable = true;
-      extensions = with pkgs; [
+      extensions = [
         firefox-addons.packages.x86_64-linux.bitwarden
         firefox-addons.packages.x86_64-linux.ublock-origin
         firefox-addons.packages.x86_64-linux.kristofferhagen-nord-theme
