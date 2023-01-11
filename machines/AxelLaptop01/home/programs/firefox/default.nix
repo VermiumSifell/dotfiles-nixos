@@ -1,9 +1,9 @@
-{ config, pkgs, nur, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   programs.firefox = {
     enable = true;
-    extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+    extensions = with inputs.firefox-addons.packages.${system}; [
       bitwarden
       ublock-origin
       kristofferhagen-nord-theme
