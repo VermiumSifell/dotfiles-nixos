@@ -4,9 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    nur.url = "github:nix-community/nur";
-
-    firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+    firefox-addons.url = "gitlabycee/nur-expressions?dir=pkgs/firefox-addons";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -14,18 +12,15 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nur, ... }:
+  outputs = { self, nixpkgs, home-manager, firefox-addons, ... }:
     {
       nixosConfigurations = {
         AxelLaptop01 = nixpkgs.lib.nixosSystem
           {
-            specialArgs = { inherit nur; };
+            specialArgs = { inherit firefox-addons; };
 
             modules = [
               home-manager.nixosModules.home-manager
-              {
-                home-manager.sharedModules = [ nur.hmModules.nur ];
-              }
               ./machines/AxelLaptop01/configuration.nix
               ./machines/AxelLaptop01/hardware.nix
               ./machines/AxelLaptop01/home
