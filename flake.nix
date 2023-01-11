@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    firefox-addons.url = "gitlabycee/nur-expressions?dir=pkgs/firefox-addons";
+    firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
 
     home-manager = {
       url = "github:nix-community/home-manager";
