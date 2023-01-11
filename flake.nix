@@ -17,6 +17,7 @@
       nixosConfigurations = {
         # Configuration for AxelLaptop01
         AxelLaptop01 = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
           modules = [
             home-manager.nixosModules.home-manager
             ./machines/AxelLaptop01/configuration.nix
