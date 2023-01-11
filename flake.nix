@@ -16,6 +16,8 @@
     {
       nixosConfigurations = {
         AxelLaptop01 = nixpkgs.lib.nixosSystem {
+          specialArgs = nur;
+
           modules = [
             { nixpkgs.overlays = [ nur.overlay ]; }
             home-manager.nixosModules.home-manager
