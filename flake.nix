@@ -12,18 +12,29 @@
     };
   };
 
-  outputs = { self, config,nixpkgs, home-manager, firefox-addons, ... }:
+  outputs = { self, nixpkgs, home-manager, firefox-addons, ... }:
     {
       nixosConfigurations = {
-        AxelLaptop01 = nixpkgs.lib.nixosSystem
-          {
-            modules = [
-              home-manager.nixosModules.home-manager
-              ./machines/AxelLaptop01/configuration.nix
-              ./machines/AxelLaptop01/hardware.nix
-              ./machines/AxelLaptop01/home
-            ];
-          };
+        # Configuration for AxelLaptop01
+        AxelLaptop01 = nixpkgs.lib.nixosSystem {
+          modules = [
+            home-manager.nixosModules.home-manager
+            ./machines/AxelLaptop01/configuration.nix
+            ./machines/AxelLaptop01/hardware.nix
+            ./machines/AxelLaptop01/home
+          ];
+        };
+
+        # Configuration for AxelLaptop02
+        AxelLaptop02 = nixpkgs.lib.nixosSystem {
+          modules = [
+            home-manager.nixosModules.home-manager
+            ./machines/AxelLaptop02/configuration.nix
+            ./machines/AxelLaptop02/hardware.nix
+            ./machines/AxelLaptop02/home
+          ];
+        };
+
       };
     };
 }
