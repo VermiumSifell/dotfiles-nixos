@@ -72,10 +72,10 @@ in
 
     programs.home-manager.enable = true;
 
-    # imports = builtins.concatMap import [
-    #   ./programs
-    #   ./services
-    # ];
+    imports = builtins.concatMap import [
+      ./programs
+      ./services
+    ];
 
 
     programs.firefox = {
