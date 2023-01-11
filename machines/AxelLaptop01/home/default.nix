@@ -1,4 +1,4 @@
-{ config, pkgs, nur, ... }:
+{ config, pkgs, firefox-addons, ... }:
 let
   username = "vermium";
   homeDirectory = "/home/${username}";
@@ -68,7 +68,6 @@ let
   ];
 in
 {
-  home-manager.sharedModules = [ nur.hmModules.nur ];
   home-manager.users.vermium = {
 
     programs.home-manager.enable = true;
@@ -81,10 +80,10 @@ in
 
     programs.firefox = {
       enable = true;
-      extensions = with config.nur.repos.rycee.firefox-addons; [
-        bitwarden
-        ublock-origin
-        kristofferhagen-nord-theme
+      extensions = [
+        firefox-addons.packages.x86_64-linux.bitwarden
+        firefox-addons.packages.x86_64-linux.ublock-origin
+        firefox-addons.packages.x86_64-linux.kristofferhagen-nord-theme
       ];
       profiles = {
         default = {
