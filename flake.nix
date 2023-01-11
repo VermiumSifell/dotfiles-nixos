@@ -12,7 +12,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, firefox-addons, ... }:
     {
       nixosConfigurations = {
         AxelLaptop01 = nixpkgs.lib.nixosSystem
