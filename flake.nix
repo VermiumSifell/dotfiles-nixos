@@ -16,8 +16,11 @@
     {
       nixosConfigurations = {
         AxelLaptop01 = nixpkgs.lib.nixosSystem {
+          specialArgs = nur;
+
           modules = [
             home-manager.nixosModules.home-manager
+            nur.nixosModules.nur
             ./machines/AxelLaptop01/configuration.nix
             ./machines/AxelLaptop01/hardware.nix
             ./machines/AxelLaptop01/home
