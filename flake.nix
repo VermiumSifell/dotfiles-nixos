@@ -12,7 +12,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     {
       nixosConfigurations = {
         # Configuration for AxelLaptop01
