@@ -17,8 +17,6 @@
       nixosConfigurations = {
         AxelLaptop01 = nixpkgs.lib.nixosSystem
           {
-            specialArgs = { inherit firefox-addons; };
-
             modules = [
               home-manager.nixosModules.home-manager
               ./machines/AxelLaptop01/configuration.nix
