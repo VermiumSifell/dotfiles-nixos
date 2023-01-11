@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 let
   username = "vermium";
   homeDirectory = "/home/${username}";
@@ -80,10 +80,10 @@ in
 
     programs.firefox = {
       enable = true;
-      extensions = [
-        firefox-addons.packages.x86_64-linux.bitwarden
-        firefox-addons.packages.x86_64-linux.ublock-origin
-        firefox-addons.packages.x86_64-linux.kristofferhagen-nord-theme
+      extensions = with inputs.firefox-addons.packages.x86_64-linux; [
+        bitwarden
+        ublock-origin
+        kristofferhagen-nord-theme
       ];
       profiles = {
         default = {
