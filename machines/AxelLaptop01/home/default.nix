@@ -68,6 +68,7 @@ let
   ];
 in
 {
+  home-manager.sharedModules = [ nur.hmModules.nur ];
   home-manager.users.vermium = {
 
     programs.home-manager.enable = true;
@@ -80,7 +81,7 @@ in
 
     programs.firefox = {
       enable = true;
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      extensions = with config.nur.repos.rycee.firefox-addons; [
         bitwarden
         ublock-origin
         kristofferhagen-nord-theme
