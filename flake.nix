@@ -12,11 +12,12 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     {
       nixosConfigurations = {
         AxelLaptop01 = nixpkgs.lib.nixosSystem {
           modules = [
+            home-manager.nixosModules.home-manager
             ./machines/AxelLaptop01/configuration.nix
             ./machines/AxelLaptop01/hardware.nix
             ./machines/AxelLaptop01/home
