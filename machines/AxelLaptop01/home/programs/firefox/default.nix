@@ -3,7 +3,7 @@
 {
   programs.firefox = {
     enable = true;
-    extensions = with inputs.firefox-addons.packages.${config.system}; [
+    extensions = with inputs.firefox-addons.packages.${system}; [
       bitwarden
       ublock-origin
       kristofferhagen-nord-theme
