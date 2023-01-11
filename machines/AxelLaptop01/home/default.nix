@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, firefox-addons, ... }:
 let
   username = "vermium";
   homeDirectory = "/home/${username}";
