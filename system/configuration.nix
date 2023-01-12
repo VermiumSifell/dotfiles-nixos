@@ -1,11 +1,8 @@
 { inputs, lib, config, pkgs, ... }:
 
 {
-  # TODO: Redo this part
   imports = [
     ./hardware-configuration.nix
-    ./services.nix
-    ./programs.nix
   ];
 
   hardware = {
@@ -61,6 +58,78 @@
 
   security = {
     rtkit.enable = true;
+  };
+
+  # TODO: Refactor into modules
+  services = {
+    xserver = {
+      enable = true;
+      layout = "se";
+
+      # Touchpad support
+      libinput = {
+        enable = true;
+        touchpad.tapping = true;
+      };
+
+      videoDrivers = [ "nvidia" ];
+
+      displayManager.defaultSession = "none+i3";
+      windowManager = {
+        i3.enable = true;
+        awesome.enable = true;
+      };
+    };
+
+    openssh = {
+      enable = true;
+      # Forbid root login through SSH.
+      permitRootLogin = "no";
+      # Use keys only. Remove if you want to SSH using password (not recommended)
+      passwordAuthentication = false;
+    };
+
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      # If you want to use JACK applications, uncomment this
+      #jack.enable = true;
+    };
+
+    autorandr = { enable = true; };
+
+    blueman = { enable = true; };
+
+  };
+
+  programs = {
+    slock = {
+      enable = true;
+    };
+
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    };
+
+    dconf = { enable = true; };
+  };
+
+  environment = {
+    systemPackages = with pkgs; [
+      dmenu
+      libnotify
+      slock
+      playerctl
+      rofi
+      brightnessctl
+      feh
+      pulseaudio
+      rofi-bluetooth
+    ];
   };
 
   nixpkgs.config.allowUnfree = true;
