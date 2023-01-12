@@ -1,4 +1,4 @@
-{ inputs, lib, config, pkgs, ... }:
+{ inputs, lib, config, pkgs, wallpaper, gtk-theme, ... }:
 
 {
   imports = [
@@ -74,7 +74,14 @@
 
       videoDrivers = [ "nvidia" ];
 
-      displayManager.defaultSession = "none+i3";
+      displayManager = {
+        lightdm = {
+          enable = true;
+          background = wallpaper;
+          greeters.gtk.theme = gtk-theme;
+        };
+        defaultSession = "none+i3";
+      };
       windowManager = {
         i3.enable = true;
         awesome.enable = true;
