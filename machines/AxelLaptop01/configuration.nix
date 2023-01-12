@@ -1,4 +1,5 @@
 { inputs, lib, config, pkgs, ... }: {
+
   imports = [
     ./hardware.nix
     ./mess/services.nix
@@ -14,7 +15,7 @@
 
   time.timeZone = "Europe/Stockholm";
 
-  services.greenclip.enable=true;
+  services.greenclip.enable = true;
 
 
   boot.loader.grub.enable = true;

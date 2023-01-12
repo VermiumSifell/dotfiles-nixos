@@ -80,7 +80,7 @@ in
 
     programs.firefox = {
       enable = true;
-      extensions = with inputs.firefox-addons.packages.x86_64-linux; [
+      extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
         bitwarden
         ublock-origin
         kristofferhagen-nord-theme
