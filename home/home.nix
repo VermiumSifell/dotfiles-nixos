@@ -61,6 +61,7 @@ let
     protontricks
     openssl
     direnv
+    rnix-lsp
   ];
 in
 {
