@@ -1,9 +1,9 @@
 { inputs, lib, config, pkgs, wallpaper, gtk-theme, ... }:
 
 {
-  imports = [
-    ./hardware-configuration.nix
-  ];
+  #  imports = [
+  #    ./hardware-configuration.nix
+  #  ];
 
   hardware = {
     nvidia.prime = {
@@ -57,9 +57,7 @@
     };
   };
 
-  security = {
-    rtkit.enable = true;
-  };
+  security = { rtkit.enable = true; };
 
   # TODO: Refactor into modules
   services = {
@@ -113,14 +111,14 @@
   };
 
   programs = {
-    slock = {
-      enable = true;
-    };
+    slock = { enable = true; };
 
     steam = {
       enable = true;
-      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+      remotePlay.openFirewall =
+        true; # Open ports in the firewall for Steam Remote Play
+      dedicatedServer.openFirewall =
+        true; # Open ports in the firewall for Source Dedicated Server
     };
 
     dconf = { enable = true; };
