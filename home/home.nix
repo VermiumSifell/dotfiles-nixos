@@ -97,6 +97,17 @@ in {
       gtk = {
         enable = true;
         theme = gtk-theme;
+
+        iconTheme = {
+          name = "Papirus-Dark";
+          package = pkgs.papirus-icon-theme;
+        };
+
+        cursorTheme = {
+          name = "Numix-Cursor";
+          package = pkgs.numix-cursor-theme;
+        };
+
         gtk3.extraConfig = { gtk-application-prefer-dark-theme = true; };
       };
 
