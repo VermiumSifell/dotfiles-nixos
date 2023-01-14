@@ -83,6 +83,7 @@ let
     inetutils
     ipcalc
     openssl
+    zsh
   ];
 in {
   home-manager = {
@@ -238,6 +239,7 @@ in {
           DISPLAY = ":0";
           EDITOR = "nvim";
           DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
+          SHELL = "${pkgs.zsh}/bin/zsh";
           MOZ_USE_XINPUT2 = "1";
         };
       };
@@ -255,6 +257,7 @@ in {
 
       fonts.fontconfig.enable = true;
       programs.git.enable = true;
+      programs.zsh.enable = true;
     };
   };
 }
