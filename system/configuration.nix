@@ -46,6 +46,8 @@
       isNormalUser = true;
       extraGroups = [ "wheel" "docker" "networkmanager" ];
       shell = pkgs.zsh;
+
+      initialPassword = "welcome";
     };
   };
 
