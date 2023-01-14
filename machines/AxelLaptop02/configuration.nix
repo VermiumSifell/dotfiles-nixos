@@ -99,6 +99,7 @@
 
     blueman = { enable = true; };
 
+    tlp = { enable = true; };
   };
 
   programs = {
