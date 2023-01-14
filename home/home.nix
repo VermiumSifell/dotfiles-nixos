@@ -41,7 +41,7 @@ let
     libreoffice
 
     ## SCHOOL
-   # ciscoPacketTracer8
+    # ciscoPacketTracer8
 
     ## FONTS
     (pkgs.nerdfonts.override {
@@ -117,6 +117,7 @@ in {
             source = ./wm/i3;
             recursive = true;
           };
+          "polybar/launch.sh" = { source = ./configs/polybar/launch.sh; };
         };
       };
 
@@ -254,8 +255,11 @@ in {
       };
 
       fonts.fontconfig.enable = true;
-      programs.git = {enable = true;    userName  = "Vermium Sifell";
-    userEmail = "vermium@zyner.org";};
+      programs.git = {
+        enable = true;
+        userName = "Vermium Sifell";
+        userEmail = "vermium@zyner.org";
+      };
     };
   };
 }
