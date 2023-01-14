@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nur.url = "github:nix-community/nur";
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -12,7 +13,7 @@
     };
   };
 
-  outputs = { nixpkgs, nur, home-manager, ... }@attrs:
+  outputs = { nixpkgs, nur, nix-doom-emacs, home-manager, ... }@attrs:
     let
       system = "x86_64-linux";
 
