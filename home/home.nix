@@ -39,6 +39,7 @@ let
     vlc
     gimp
     libreoffice
+    renoise
 
     ## SCHOOL
     ciscoPacketTracer8
