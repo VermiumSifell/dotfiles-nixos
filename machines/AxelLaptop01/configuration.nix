@@ -46,6 +46,8 @@
 
   security = { rtkit.enable = true; };
 
+  zramSwap.enable = true;
+
   # TODO: Refactor into modules
   services = {
     xserver = {

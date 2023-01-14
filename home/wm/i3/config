@@ -48,7 +48,7 @@ bindsym XF86AudioPrev exec "playerctl --player=spotify,%any previous"
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec alacritty &
 
 # kill focused window
 bindsym $mod+Shift+q kill
