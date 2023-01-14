@@ -62,6 +62,7 @@ let
     openssl
     direnv
     rnix-lsp
+    nixfmt
   ];
 in
 {
