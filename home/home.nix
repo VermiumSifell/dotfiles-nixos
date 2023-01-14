@@ -16,7 +16,7 @@ let
     alacritty # A cross-platform, GPU-accelerated terminal emulator
     dunst # Lightweight and customizable notification daemon
     signal-desktop # Private, simple, and secure messenger
-    emacs # The extensible, customizable GNU text editor
+   # emacs # The extensible, customizable GNU text editor
     qalculate-qt # The ultimate desktop calculator
     xfce.thunar # Xfce file manager
     vscodium # Open source source code editor developed by Microsoft for Windows, Linux and macOS (VS Code without MS branding/telemetry/licensing)
@@ -70,7 +70,6 @@ in
     useUserPackages = true;
 
     users.vermium = {
-
       programs.home-manager.enable = true;
 
       imports = [
@@ -79,11 +78,20 @@ in
         ./services
       ];
 
-      xsession.windowManager.i3 = {
+      gtk = {
         enable = true;
-        extraConfig = ''
-          set $wallpaper ${wallpaper}
-        '';
+        theme = gtk-theme;
+        gtk3.extraConfig = {
+          gtk-application-prefer-dark-theme = true;
+        };
+      };
+
+      qt = {
+        enable = true;
+        style = {
+          name = "adwaita-dark";
+          package = pkgs.adwaita-qt;
+        };
       };
 
       xdg = {
@@ -95,33 +103,11 @@ in
             source = ./i3;
             recursive = true;
           };
-          # "rofi" = {
-          #   source = ./configs/rofi;
-          #   recursive = true;
-          # };
-          # "dunst" = {
-          #   source = ./configs/dunst;
-          #   recursive = true;
-          # };
-          #};
         };
       };
 
       programs.direnv.enable = true;
       programs.direnv.nix-direnv.enable = true;
-
-      gtk = {
-        enable = true;
-        theme = gtk-theme;
-        gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
-      };
-      qt = {
-        enable = true;
-        style = {
-          name = "adwaita-dark";
-          package = pkgs.adwaita-qt;
-        };
-      };
 
       services.picom.enable = true;
 
