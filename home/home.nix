@@ -30,7 +30,6 @@ let
     ## TERMINALS
     alacritty
     kitty
-    urxvt
 
     ## EMAIL
     thunderbird
