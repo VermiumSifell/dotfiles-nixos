@@ -17,7 +17,7 @@
     let
       system = "x86_64-linux";
 
-      wallpaper = ./wallpapers/clean.png;
+      wallpaper = ./wallpapers/nord-rainbow-dark-nix.png;
 
       gtk-theme = {
         name = "Materia-dark";
