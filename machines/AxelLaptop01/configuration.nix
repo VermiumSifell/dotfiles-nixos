@@ -37,15 +37,6 @@
     networkmanager.enable = true;
   };
 
-  users.users = {
-    vermium = {
-      isNormalUser = true;
-      extraGroups = [ "wheel" "docker" "networkmanager" ];
-
-      initialPassword = "welcome";
-    };
-  };
-
   virtualisation = {
     docker = {
       enable = true;
@@ -103,6 +94,8 @@
     autorandr = { enable = true; };
 
     blueman = { enable = true; };
+
+    tlp = { enable = true; };
 
   };
 

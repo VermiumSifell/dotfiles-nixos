@@ -127,7 +127,6 @@ in {
       };
 
       services.picom.enable = true;
-      services.tlp.enable = true;
 
       programs.autorandr = {
         enable = true;
