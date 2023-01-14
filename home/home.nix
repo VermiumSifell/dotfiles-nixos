@@ -75,7 +75,12 @@ in
       ./services
     ];
 
-    programs.feh = { };
+    xsession.windowManager.i3 = {
+      enable = true;
+      extraConfig = ''
+        set $wallpaper ${wallpaper}
+      '';
+    };
 
     xdg = {
       inherit configHome;
@@ -83,7 +88,7 @@ in
 
       configFile = {
         "i3" = {
-          source = ./configs/i3;
+          source = ./i3;
           recursive = true;
         };
         # "rofi" = {
@@ -94,6 +99,7 @@ in
         #   source = ./configs/dunst;
         #   recursive = true;
         # };
+        #};
       };
     };
 

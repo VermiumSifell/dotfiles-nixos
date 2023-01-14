@@ -1,5 +1,3 @@
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 # class                 border  bground text    indicator child_border
 client.focused          #434c5e #434c5e #d8dee9 #434c5e #434c5e
 client.focused_inactive #2e3440 #2e3440 #d8dee9 #2e3440 #2e3440
@@ -18,20 +16,16 @@ font pango:JetbrainsMono Nerd Font 8
 # Kill GTA
 bindsym $mod+g exec ps aux | grep -i Grand | awk '{print $2}' | xargs kill -9
 
-# Start picom (compositor)
-exec --no-startup-id picom
-
 # Start autorandr (screen management)
 exec --no-startup-id autorandr --change --force
-
-# Start dunst (notification daemon)
-exec --no-startup-id dunst
 
 # Start polybar (status bar)
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Start feh (wallpaper)
-exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.local/share/backgrounds/nord-arch-fullnamelogo.png &
+#exec_always --no-startup-id feh --no-fehbg --bg-scale ~/.background-image &
+
+exec_always "notify-send HELLU ${wallpaper}"
 
 # Brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q set 3%-
