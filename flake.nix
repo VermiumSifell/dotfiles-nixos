@@ -33,6 +33,7 @@
           modules = [
             ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
             home-manager.nixosModules.home-manager
+            ./common/users.nix
             ./machines/AxelLaptop01/configuration.nix
             ./machines/AxelLaptop01/hardware-configuration.nix
             ./home/home.nix
@@ -46,6 +47,7 @@
           modules = [
             ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
             home-manager.nixosModules.home-manager
+            ./common/users.nix
             ./machines/AxelLaptop02/configuration.nix
             ./machines/AxelLaptop02/hardware-configuration.nix
             ./home/home.nix

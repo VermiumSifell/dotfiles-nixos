@@ -1,10 +1,6 @@
 { inputs, lib, config, pkgs, wallpaper, gtk-theme, ... }:
 
 {
-  #  imports = [
-  #    ./hardware-configuration.nix
-  #  ];
-
   hardware = {
     nvidia.prime = {
       sync.enable = true;
