@@ -73,7 +73,7 @@ in
 
       programs.home-manager.enable = true;
 
-      imports = builtins.concatMap import [
+      imports = [
         nix-doom-emacs.hmModule
         ./programs
         ./services
