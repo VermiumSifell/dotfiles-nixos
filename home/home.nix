@@ -215,20 +215,6 @@ in
         packages = defaultPkgs;
 
         file = {
-          ".my-emacs" = {
-            source = ./homes/.my-emacs;
-            recursive = true;
-          };
-          ".emacs-profiles.el" = {
-            source = ./homes/.emacs-profiles.el;
-          };
-          ".emacs-profile" = {
-            source = ./homes/.emacs-profile;
-          };
-          ".emacs.d" = {
-            source = ./homes/.emacs.d;
-            recursive = true;
-          };
           ".background-image" = {
             source = wallpaper;
           };
