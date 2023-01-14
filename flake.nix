@@ -24,10 +24,21 @@
         package = nixpkgs.legacyPackages.${system}.materia-theme;
       };
 
-    in
-    {
+    in {
       nixosConfigurations = {
         AxelLaptop01 = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = attrs // { inherit wallpaper gtk-theme; };
+
+          modules = [
+            ({ config, pkgs, ... }: { nixpkgs.overlays = [ nur.overlay ]; })
+            home-manager.nixosModules.home-manager
+            ./system/configuration.nix
+            ./home/home.nix
+          ];
+        };
+
+        AxelLaptop02 = nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = attrs // { inherit wallpaper gtk-theme; };
 
