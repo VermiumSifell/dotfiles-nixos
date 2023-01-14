@@ -41,7 +41,7 @@ let
     libreoffice
 
     ## SCHOOL
-    # ciscoPacketTracer8
+    ciscoPacketTracer8
 
     ## FONTS
     (pkgs.nerdfonts.override {
