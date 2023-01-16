@@ -77,13 +77,14 @@
         i3 = {
           enable = true;
           extraSessionCommands = ''
-            eval $(gnome-keyring-daemon --daemonize)
             export SSH_AUTH_SOCK
           '';
         };
         awesome.enable = true;
       };
     };
+
+    #            eval $(gnome-keyring-daemon --daemonize)
 
     openssh = {
       enable = true;
@@ -110,7 +111,7 @@
 
   };
 
-  security.pam.services.lightdm.enableGnomeKeyring = true;
+  security.pam.services.login.enableGnomeKeyring = true;
 
   programs = {
     slock = { enable = true; };
