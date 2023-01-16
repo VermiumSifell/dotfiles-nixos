@@ -49,7 +49,7 @@
   zramSwap.enable = true;
 
   programs.seahorse.enable = true;
-
+  services.gnome.gnome-keyring.enable = true;
   # TODO: Refactor into modules
   services = {
     xserver = {
