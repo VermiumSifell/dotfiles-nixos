@@ -256,6 +256,11 @@ in {
 
       programs.ssh.enable = true;
 
+      xsession = {
+        enable = true;
+        importedVariables = [ "SSH_AUTH_SOCK" ];
+      };
+
       # restart services on change
       systemd.user.startServices = "sd-switch";
 
