@@ -110,6 +110,8 @@
     blueman = { enable = true; };
 
     tlp = { enable = true; };
+
+    greenclip = { enable = true; };
   };
 
   security.pam.services.login.enableGnomeKeyring = true;
