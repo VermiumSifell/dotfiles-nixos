@@ -267,11 +267,6 @@ in {
       };
 
       fonts.fontconfig.enable = true;
-      programs.git = {
-        enable = true;
-        userName = "Vermium Sifell";
-        userEmail = "vermium@zyner.org";
-      };
     };
   };
 }
