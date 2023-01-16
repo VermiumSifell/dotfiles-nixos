@@ -138,6 +138,7 @@ in {
       };
 
       services.picom.enable = true;
+      services.flameshot = { enable = true; };
 
       programs.autorandr = {
         enable = true;
@@ -255,7 +256,7 @@ in {
       };
 
       programs.ssh.enable = true;
-      
+
       #  xsession = {
       #   enable = true;
       #  importedVariables = [ "SSH_AUTH_SOCK" ];
