@@ -50,6 +50,7 @@
 
   programs.seahorse.enable = true;
   services.gnome.gnome-keyring.enable = true;
+
   # TODO: Refactor into modules
   services = {
     xserver = {
@@ -102,6 +103,8 @@
     tlp = { enable = true; };
 
   };
+
+  security.pam.services.lightdm.enableGnomeKeyring = true;
 
   programs = {
     slock = { enable = true; };
