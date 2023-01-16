@@ -104,10 +104,7 @@
   programs = {
     slock = { enable = true; };
 
-    ssh = {
-      enable = true;
-      startAgent = true;
-    };
+    ssh = { startAgent = true; };
 
     steam = {
       enable = true;
