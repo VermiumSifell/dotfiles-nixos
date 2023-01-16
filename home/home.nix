@@ -255,10 +255,7 @@ in {
       };
 
       programs.ssh.enable = true;
-
-      systemd.user.sessionVariables.SSH_AUTH_SOCK =
-        "/run/user/1000/keyring/ssh";
-
+      
       #  xsession = {
       #   enable = true;
       #  importedVariables = [ "SSH_AUTH_SOCK" ];
