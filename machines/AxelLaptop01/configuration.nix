@@ -76,15 +76,14 @@
       windowManager = {
         i3 = {
           enable = true;
-          #       extraSessionCommands = ''
-          #         export SSH_AUTH_SOCK
-          #       '';
+          services.xserver.windowManager.i3.extraSessionCommands = ''
+            eval $(gnome-keyring-daemon --daemonize)
+            export SSH_AUTH_SOCK
+          '';
         };
         awesome.enable = true;
       };
     };
-
-    #            eval $(gnome-keyring-daemon --daemonize)
 
     openssh = {
       enable = true;
