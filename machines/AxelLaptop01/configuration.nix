@@ -122,6 +122,8 @@
     dconf = { enable = true; };
   };
 
+  services.gnome3.gnome-keyring.enable = true;
+
   environment = {
     systemPackages = with pkgs; [
       dmenu
