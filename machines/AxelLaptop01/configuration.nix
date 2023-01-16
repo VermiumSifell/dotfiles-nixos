@@ -48,6 +48,8 @@
 
   zramSwap.enable = true;
 
+  programs.seahorse.enable = true;
+
   # TODO: Refactor into modules
   services = {
     xserver = {
