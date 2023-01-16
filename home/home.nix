@@ -254,6 +254,11 @@ in {
         };
       };
 
+      programs.ssh = {
+        enable = true;
+        extraConfig = "AddKeysToAgent yes";
+      };
+
       # restart services on change
       systemd.user.startServices = "sd-switch";
 
