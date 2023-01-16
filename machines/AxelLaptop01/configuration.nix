@@ -51,12 +51,6 @@
   programs.seahorse.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
-services.xserver.displayManager.sessionCommands = ''
-  eval $(gnome-keyring-daemon --daemonize)
-  export SSH_AUTH_SOCK
-'';
-
-
   # TODO: Refactor into modules
   services = {
     xserver = {
@@ -115,7 +109,7 @@ services.xserver.displayManager.sessionCommands = ''
   programs = {
     slock = { enable = true; };
 
-#    ssh = { startAgent = true; };
+    #    ssh = { startAgent = true; };
 
     steam = {
       enable = true;
