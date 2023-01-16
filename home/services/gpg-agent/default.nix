@@ -2,6 +2,9 @@
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 
 { inputs, lib, config, pkgs, ... }: {
-  services.gpg-agent.enable = true;
-  services.gpg-agent.pinentryFlavor = "tty";
+  services.gpg-agent = {
+    enable = true;
+    pinentryFlavor = "tty";
+    enableSSHSUpport = true;
+  };
 }
