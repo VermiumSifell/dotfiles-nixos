@@ -74,8 +74,15 @@
         defaultSession = "none+i3";
       };
       windowManager = {
-        i3.enable = true;
-        awesome.enable = true;
+        i3 =
+          {
+            enable = true;
+            extraSessionCommands = ''
+              eval $(gnome-keyring-daemon --daemonize)
+              export SSH_AUTH_SOCK
+            '';
+          }
+            awesome.enable = true;
       };
     };
 
