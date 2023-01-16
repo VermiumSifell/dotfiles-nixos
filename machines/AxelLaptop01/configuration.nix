@@ -76,8 +76,9 @@
       };
     };
 
-    openssh = {
+    ssh = {
       enable = true;
+      startAgent = true;
       # Forbid root login through SSH.
       permitRootLogin = "no";
       # Use keys only. Remove if you want to SSH using password (not recommended)
