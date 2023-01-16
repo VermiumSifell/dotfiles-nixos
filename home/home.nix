@@ -260,8 +260,6 @@ in {
       # notifications about home-manager news
       news.display = "silent";
 
-      programs.seahorse.enable = true;
-
       fonts.fontconfig.enable = true;
     };
   };
