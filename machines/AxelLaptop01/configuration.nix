@@ -76,9 +76,9 @@
       windowManager = {
         i3 = {
           enable = true;
-          extraSessionCommands = ''
-            export SSH_AUTH_SOCK
-          '';
+          #       extraSessionCommands = ''
+          #         export SSH_AUTH_SOCK
+          #       '';
         };
         awesome.enable = true;
       };
