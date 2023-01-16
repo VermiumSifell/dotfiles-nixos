@@ -57,7 +57,6 @@ let
     nixfmt
 
     ## UTILITIES
-    git
     qalculate-qt
     speedcrunch
     wireshark

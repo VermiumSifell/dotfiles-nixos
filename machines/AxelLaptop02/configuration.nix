@@ -128,6 +128,7 @@
       feh
       pulseaudio
       rofi-bluetooth
+      git
     ];
   };
 
