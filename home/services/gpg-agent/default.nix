@@ -5,6 +5,6 @@
   services.gpg-agent = {
     enable = true;
     pinentryFlavor = "tty";
-    enableSSHSUpport = true;
+    enableSSHSupport = true;
   };
 }
