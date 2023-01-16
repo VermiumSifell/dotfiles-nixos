@@ -1,9 +1,5 @@
 { ... }:
 
 {
-  imports = [
-    ./gpg-agent
-    ./polybar
-    ./dunst
-  ];
+  imports = [ ./gpg-agent ./polybar ./dunst ./gnome-keyring.nix ];
 }
