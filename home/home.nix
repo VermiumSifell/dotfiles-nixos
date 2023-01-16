@@ -246,12 +246,12 @@ in {
 
         file = { ".background-image" = { source = wallpaper; }; };
 
-        sessionVariables = {
-          DISPLAY = ":0";
-          EDITOR = "nvim";
-          DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
-          MOZ_USE_XINPUT2 = "1";
-        };
+        #        sessionVariables = {
+        #         DISPLAY = ":0";
+        #        EDITOR = "nvim";
+        #       DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
+        #      MOZ_USE_XINPUT2 = "1";
+        #   };
       };
 
       programs.ssh.enable = true;
