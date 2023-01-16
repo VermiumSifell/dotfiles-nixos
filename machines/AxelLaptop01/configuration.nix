@@ -109,7 +109,7 @@
   programs = {
     slock = { enable = true; };
 
-    ssh = { startAgent = true; };
+#    ssh = { startAgent = true; };
 
     steam = {
       enable = true;
@@ -121,8 +121,6 @@
 
     dconf = { enable = true; };
   };
-
-  services.gnome3.gnome-keyring.enable = true;
 
   environment = {
     systemPackages = with pkgs; [
