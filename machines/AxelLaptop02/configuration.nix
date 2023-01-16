@@ -51,6 +51,9 @@
 
   security = { rtkit.enable = true; };
 
+  programs.seahorse.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+
   # TODO: Refactor into modules
   services = {
     xserver = {
@@ -74,7 +77,13 @@
         defaultSession = "none+i3";
       };
       windowManager = {
-        i3.enable = true;
+        i3 = {
+          enable = true;
+          extraSessionCommands = ''
+            eval $(gnome-keyring-daemon --daemonize)
+            export SSH_AUTH_SOCK
+          '';
+        };
         awesome.enable = true;
       };
     };
@@ -102,6 +111,8 @@
 
     tlp = { enable = true; };
   };
+
+  security.pam.services.login.enableGnomeKeyring = true;
 
   programs = {
     slock = { enable = true; };

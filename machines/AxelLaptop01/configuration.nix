@@ -76,7 +76,7 @@
       windowManager = {
         i3 = {
           enable = true;
-          services.xserver.windowManager.i3.extraSessionCommands = ''
+          extraSessionCommands = ''
             eval $(gnome-keyring-daemon --daemonize)
             export SSH_AUTH_SOCK
           '';
