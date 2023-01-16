@@ -256,10 +256,13 @@ in {
 
       programs.ssh.enable = true;
 
-      xsession = {
-        enable = true;
-        importedVariables = [ "SSH_AUTH_SOCK" ];
-      };
+      systemd.user.sessionVariables.SSH_AUTH_SOCK =
+        "/run/user/1000/keyring/ssh";
+
+      #  xsession = {
+      #   enable = true;
+      #  importedVariables = [ "SSH_AUTH_SOCK" ];
+      # };
 
       # restart services on change
       systemd.user.startServices = "sd-switch";
