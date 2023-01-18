@@ -1,39 +1,15 @@
 { inputs, lib, config, pkgs, wallpaper, gtk-theme, ... }:
 
 {
-  #  imports = [
-  #    ./hardware-configuration.nix
-  #  ];
+  imports = [ ../base/users.nix ../base/bootloader.nix ];
 
   hardware = {
-    #    nvidia.prime = {
-    #      sync.enable = true;
-    #
-    #      nvidiaBusId = "PCI:1:0:0";
-    #      amdgpuBusId = "PCI:5:0:0";
-    #    };
-
     bluetooth.enable = true;
-
     opengl.enable = true;
     opengl.driSupport32Bit = true;
   };
 
-  boot = {
-    loader = {
-      grub = {
-        enable = true;
-        efiSupport = true;
-        device = "nodev";
-        useOSProber = true;
-      };
-
-      efi = {
-        canTouchEfiVariables = true;
-        efiSysMountPoint = "/efi";
-      };
-    };
-  };
+  boot.loader.grub.useOSProber = true;
 
   time.timeZone = "Europe/Stockholm";
 
@@ -42,17 +18,15 @@
     networkmanager.enable = true;
   };
 
-  virtualisation = {
-    docker = {
-      enable = true;
-      storageDriver = "btrfs";
+  security = {
+    rtkit.enable = true;
+    pam = {
+      services = {
+        lightdm = { enableGnomeKeyring = true; };
+        login = { enableGnomeKeyring = true; };
+      };
     };
   };
-
-  security = { rtkit.enable = true; };
-
-  programs.seahorse.enable = true;
-  services.gnome.gnome-keyring.enable = true;
 
   # TODO: Refactor into modules
   services = {
@@ -60,13 +34,10 @@
       enable = true;
       layout = "se";
 
-      # Touchpad support
       libinput = {
         enable = true;
         touchpad.tapping = true;
       };
-
-      #      videoDrivers = [ "nvidia" ];
 
       displayManager = {
         lightdm = {
@@ -90,34 +61,31 @@
 
     openssh = {
       enable = true;
-      # Forbid root login through SSH.
       permitRootLogin = "no";
-      # Use keys only. Remove if you want to SSH using password (not recommended)
       passwordAuthentication = false;
     };
 
     pipewire = {
       enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
       pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
-      #jack.enable = true;
+      jack.enable = true;
     };
 
-    autorandr = { enable = true; };
-
-    blueman = { enable = true; };
-
-    tlp = { enable = true; };
-
-    greenclip = { enable = true; };
+    gnome.gnome-keyring.enable = true;
+    autorandr.enable = true;
+    blueman.enable = true;
+    tlp.enable = true;
+    greenclip.enable = true;
   };
 
-  security.pam.services.login.enableGnomeKeyring = true;
-
   programs = {
-    slock = { enable = true; };
+    dconf.enable = true;
+    slock.enable = true;
+    seahorse.enable = true;
 
     steam = {
       enable = true;
@@ -127,7 +95,6 @@
         true; # Open ports in the firewall for Source Dedicated Server
     };
 
-    dconf = { enable = true; };
   };
 
   environment = {

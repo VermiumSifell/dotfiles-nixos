@@ -1,6 +1,8 @@
 { inputs, lib, config, pkgs, wallpaper, gtk-theme, ... }:
 
 {
+  imports = [ ../base/users.nix ../base/bootloader.nix ];
+
   hardware = {
     nvidia.prime = {
       sync.enable = true;
@@ -15,32 +17,17 @@
     opengl.driSupport32Bit = true;
   };
 
-  boot = {
-    loader = {
-      grub = {
-        enable = true;
-        efiSupport = true;
-        device = "nodev";
-      };
-
-      efi = {
-        canTouchEfiVariables = true;
-        efiSysMountPoint = "/efi";
-      };
-    };
-  };
-
   time.timeZone = "Europe/Stockholm";
 
   networking = {
     hostName = "AxelLaptop01";
-    networkmanager.enable = true;
-  };
-
-  virtualisation = {
-    docker = {
+    networkmanager = {
       enable = true;
-      storageDriver = "btrfs";
+
+      wifi = {
+        powersave = true;
+        scanRandMacAddress = true;
+      };
     };
   };
 
@@ -56,8 +43,6 @@
     xserver = {
       enable = true;
       layout = "se";
-
-      exportConfiguration = true;
 
       # Touchpad support
       libinput = {
@@ -97,6 +82,11 @@
         };
         awesome.enable = true;
       };
+    };
+
+    logind = {
+      lidSwitch = "suspend";
+      lidSwitchExternalPower = "lock";
     };
 
     openssh = {
