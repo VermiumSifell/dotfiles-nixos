@@ -57,6 +57,8 @@
       enable = true;
       layout = "se";
 
+      exportConfiguration = true;
+
       # Touchpad support
       libinput = {
         enable = true;
