@@ -69,7 +69,19 @@
         lightdm = {
           enable = true;
           background = wallpaper;
-          greeters.gtk.theme = gtk-theme;
+          greeters.gtk = {
+            theme = gtk-theme;
+            indicators = [
+              "~host"
+              "~spacer"
+              "~clock"
+              "~spacer"
+              "~session"
+              "~language"
+              "~a11y"
+              "~power"
+            ];
+          };
         };
         defaultSession = "none+i3";
       };
