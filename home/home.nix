@@ -63,6 +63,7 @@ let
     ripgrep
     wget
     unzip
+    zip
     direnv
     nixpkgs-fmt
     nmap
