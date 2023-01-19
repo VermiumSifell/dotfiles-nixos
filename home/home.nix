@@ -238,8 +238,6 @@ in {
         doomPrivateDir = ./configs/doom;
       };
 
-      programs.rbw = { enable = true; };
-
       services.emacs.enable = true;
 
       home = {
