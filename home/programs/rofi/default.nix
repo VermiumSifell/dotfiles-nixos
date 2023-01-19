@@ -9,6 +9,7 @@
       rofi-calc
       rofi-emoji
       haskellPackages.greenclip
+      rofi-rbw
     ];
   };
 }

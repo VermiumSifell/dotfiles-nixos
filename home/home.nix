@@ -84,6 +84,7 @@ let
     inetutils
     ipcalc
     openssl
+    rbw
   ];
 in {
   home-manager = {
