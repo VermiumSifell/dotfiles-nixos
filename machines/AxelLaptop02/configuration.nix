@@ -1,7 +1,8 @@
 { inputs, lib, config, pkgs, wallpaper, gtk-theme, ... }:
 
 {
-  imports = [ ../base/users.nix ../base/bootloader.nix ];
+  imports =
+    [ ../base/users.nix ../base/bootloader.nix ../base/virtualisation.nix ];
 
   hardware = {
     bluetooth.enable = true;
