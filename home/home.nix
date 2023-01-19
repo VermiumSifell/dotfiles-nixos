@@ -128,7 +128,6 @@ in {
             source = ./wm/i3;
             recursive = true;
           };
-          "i3/wallpaper" = { text = "set $wallpaper ${wallpaper}"; };
           "polybar/launch.sh" = { source = ./configs/polybar/launch.sh; };
         };
       };
