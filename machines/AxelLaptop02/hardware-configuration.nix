@@ -28,7 +28,7 @@
     };
 
   fileSystems."/boot" =
-    { device = "/dev/nvme0n1p4";
+    { device = "/dev/nvme0n1p6"; #p4
       fsType = "btrfs";
       options = [ "subvol=nixos" "compress=zstd" "ssd" ];
     };
