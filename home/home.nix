@@ -84,7 +84,6 @@ let
     inetutils
     ipcalc
     openssl
-    rbw
   ];
 in {
   home-manager = {
@@ -238,6 +237,8 @@ in {
         enable = true;
         doomPrivateDir = ./configs/doom;
       };
+
+      programs.rbw = { enable = true; };
 
       services.emacs.enable = true;
 
