@@ -9,7 +9,7 @@ client.background       #2e3440
 
 set $mod Mod4
 
-include ./wallpaper
+include wallpaper
 exec_always --no-startup-id "notify-send $wallpaper"
 
 # Font for window titles. Will also be used by the bar unless a different font
