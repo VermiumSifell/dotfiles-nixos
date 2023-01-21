@@ -168,8 +168,6 @@ in {
         inherit username homeDirectory;
         stateVersion = "22.05";
 
-        packages = defaultPkgs;
-
         file = { ".background-image" = { source = wallpaper; }; };
 
         #        sessionVariables = {
