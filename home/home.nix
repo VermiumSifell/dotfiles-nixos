@@ -90,6 +90,7 @@ let
     wireguard-tools
     tmux
     openssl
+    thefuck
   ];
 in {
   home-manager = {
