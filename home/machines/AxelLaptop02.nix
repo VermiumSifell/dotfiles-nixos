@@ -159,7 +159,7 @@ in {
 
       programs.doom-emacs = {
         enable = true;
-        doomPrivateDir = ./configs/doom;
+        doomPrivateDir = ../configs/doom;
       };
 
       services.emacs.enable = true;
@@ -167,8 +167,6 @@ in {
       home = {
         inherit username homeDirectory;
         stateVersion = "22.05";
-
-        packages = defaultPkgs;
 
         file = { ".background-image" = { source = wallpaper; }; };
 
