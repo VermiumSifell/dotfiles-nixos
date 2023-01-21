@@ -17,9 +17,17 @@ in {
         ../programs
         ../services
         ../modules/school.nix
-        ../modules/fonts.nix
+        ../modules/browsers.nix
         ../modules/development.nix
+        ../modules/fonts.nix
         ../modules/network-utils.nix
+        ../modules/utils.nix
+        ../modules/chat.nix
+        ../modules/editors.nix
+        ../modules/common.nix
+        ../modules/email.nix
+        ../modules/media.nix
+        ../modules/terminals.nix
       ];
 
       gtk = {

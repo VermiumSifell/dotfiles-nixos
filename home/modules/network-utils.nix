@@ -11,5 +11,6 @@
     tcpdump
     wireguard-tools
     bind
+    networkmanagerapplet
   ];
 }

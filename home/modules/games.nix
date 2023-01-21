@@ -1,5 +1,16 @@
 { config, lib, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ lutris bastet minecraft prismlauncher ];
+  home.packages = with pkgs; [
+    ## Games
+    minecraft
+    bastet
+
+    ## Launchers
+    prismlauncher
+    lutris
+
+    ## Utilities
+    protontricks
+  ];
 }

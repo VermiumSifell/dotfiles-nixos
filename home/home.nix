@@ -5,94 +5,95 @@ let
   homeDirectory = "/home/${username}";
   configHome = "${homeDirectory}/.config";
 
-  defaultPkgs = with pkgs; [
-    ## EDITORS
-    vim
-    vscodium
-    neovim
+  defaultPkgs = with pkgs;
+    [
+      # ## EDITORS
+      # vim
+      # vscodium
+      # neovim
 
-    # ## GAMES
-    # lutris
-    # bastet
-    # minecraft
-    # prismlauncher
+      # ## GAMES
+      # lutris
+      # bastet
+      # minecraft
+      # prismlauncher
 
-    ## BROWSERS
-    qutebrowser
-    firefox
-    chromium
+      # ## BROWSERS
+      # qutebrowser
+      # firefox
+      # chromium
 
-    ## CHAT
-    discord
-    signal-desktop
-    element-desktop
+      # ## CHAT
+      # discord
+      # signal-desktop
+      # element-desktop
 
-    ## TERMINALS
-    alacritty
-    kitty
+      # ## TERMINALS
+      # alacritty
+      # kitty
 
-    ## EMAIL
-    thunderbird
+      # ## EMAIL
+      # thunderbird
 
-    ## MEDIA
-    spotify
-    vlc
-    gimp
-    libreoffice
-    renoise
+      # ## MEDIA
+      # spotify
+      # vlc
+      # gimp
+      # libreoffice
+      # renoise
 
-    # ## SCHOOL
-    # ciscoPacketTracer8
+      # ## SCHOOL
+      # ciscoPacketTracer8
 
-    # ## FONTS
-    # (pkgs.nerdfonts.override {
-    #   fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ];
-    # })
+      # ## FONTS
+      # (pkgs.nerdfonts.override {
+      #   fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ];
+      # })
 
-    # ## DEVELOPMENT
-    # docker
-    # docker-compose
-    # postman
-    # rnix-lsp
-    # nixfmt
-    # direnv
-    # nixpkgs-fmt
+      # ## DEVELOPMENT
+      # docker
+      # docker-compose
+      # postman
+      # rnix-lsp
+      # nixfmt
+      # direnv
+      # nixpkgs-fmt
 
-    ## NETWORKING
-    (lib.hiPrio traceroute)
-    inetutils
-    ipcalc
-    wireshark
-    nmap
-    dsniff
-    tcpdump
-    wireguard-tools
-    bind
+      # ## NETWORKING
+      # (lib.hiPrio traceroute)
+      # inetutils
+      # ipcalc
+      # wireshark
+      # nmap
+      # dsniff
+      # tcpdump
+      # wireguard-tools
+      # bind
 
-    ## UTILITIES
-    qalculate-qt
-    speedcrunch
-    ripgrep
-    wget
-    unzip
-    zip
-    btop
-    dunst
-    xfce.thunar
-    ranger
-    networkmanagerapplet
-    protontricks
-    pavucontrol
-    virt-manager
-    xclip
-    maim
-    qbittorrent
-    s3cmd
-    tmux
-    openssl
-    thefuck
-    neofetch
-  ];
+      ## UTILITIES
+      # qalculate-qt
+      # speedcrunch
+      # ripgrep
+      # wget
+      # unzip
+      # zip
+      # btop
+      # xfce.thunar
+      # protontricks
+      # virt-manager
+      # xclip
+      # maim
+      # tmux
+      # neofetch
+      # s3cmd
+      # openssl
+      # thefuck
+      # dunst
+      # ranger
+      # networkmanagerapplet
+      # pavucontrol
+      # qbittorrent
+    ];
 in {
   home-manager = {
     useGlobalPkgs = true;
