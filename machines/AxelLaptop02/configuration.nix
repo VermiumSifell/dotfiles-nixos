@@ -6,6 +6,7 @@
     ../base/bootloader.nix
     ../base/virtualisation.nix
     ../base/hardware.nix
+    ../base/audio.nix
   ];
 
   # Make sure that other operating systems show up aswell
@@ -63,16 +64,6 @@
       enable = true;
       permitRootLogin = "no";
       passwordAuthentication = false;
-    };
-
-    pipewire = {
-      enable = true;
-      alsa = {
-        enable = true;
-        support32Bit = true;
-      };
-      pulse.enable = true;
-      jack.enable = true;
     };
 
     gnome.gnome-keyring.enable = true;

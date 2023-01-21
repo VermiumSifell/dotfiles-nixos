@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  services ={
+  services = {
     pipewire = {
       enable = true;
       alsa = {

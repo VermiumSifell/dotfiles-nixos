@@ -6,6 +6,7 @@
     ../base/bootloader.nix
     ../base/virtualisation.nix
     ../base/hardware.nix
+    ../base/audio.nix
   ];
 
   hardware = {
@@ -95,15 +96,6 @@
       permitRootLogin = "no";
       # Use keys only. Remove if you want to SSH using password (not recommended)
       passwordAuthentication = false;
-    };
-
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
-      jack.enable = true;
     };
 
     autorandr = { enable = true; };
