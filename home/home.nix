@@ -67,6 +67,7 @@ let
     whois
     dsniff
     tcpdump
+    wireguard-tools
 
     ## UTILITIES
     qalculate-qt
@@ -87,10 +88,10 @@ let
     maim
     qbittorrent
     s3cmd
-    wireguard-tools
     tmux
     openssl
     thefuck
+    neofetch
   ];
 in {
   home-manager = {
