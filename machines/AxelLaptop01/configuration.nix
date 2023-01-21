@@ -132,7 +132,7 @@
         true; # Open ports in the firewall for Source Dedicated Server
     };
 
-    programs.zsh = {
+    zsh = {
       enable = true;
       oh-my-zsh = {
         enable = true;
