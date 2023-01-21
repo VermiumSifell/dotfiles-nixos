@@ -1,8 +1,12 @@
 { inputs, lib, config, pkgs, wallpaper, gtk-theme, ... }:
 
 {
-  imports =
-    [ ../base/users.nix ../base/bootloader.nix ../base/virtualisation.nix ];
+  imports = [
+    ../base/users.nix
+    ../base/bootloader.nix
+    ../base/virtualisation.nix
+    ../base/hardware.nix
+  ];
 
   hardware = {
     nvidia.prime = {
@@ -11,11 +15,6 @@
       nvidiaBusId = "PCI:1:0:0";
       amdgpuBusId = "PCI:5:0:0";
     };
-
-    bluetooth.enable = true;
-
-    opengl.enable = true;
-    opengl.driSupport32Bit = true;
   };
 
   time.timeZone = "Europe/Stockholm";

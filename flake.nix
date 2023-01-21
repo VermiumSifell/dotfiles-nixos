@@ -35,7 +35,7 @@
             ./machines/AxelLaptop01/hardware-configuration.nix
             ./machines/AxelLaptop01/configuration.nix
             home-manager.nixosModules.home-manager
-            ./home/home.nix
+            ./home/machines/AxelLaptop01.nix
           ];
         };
 
@@ -48,7 +48,7 @@
             ./machines/AxelLaptop02/hardware-configuration.nix
             ./machines/AxelLaptop02/configuration.nix
             home-manager.nixosModules.home-manager
-            ./home/home.nix
+            ./home/machines/AxelLaptop02.nix
           ];
         };
       };

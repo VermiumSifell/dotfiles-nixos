@@ -1,15 +1,14 @@
 { inputs, lib, config, pkgs, wallpaper, gtk-theme, ... }:
 
 {
-  imports =
-    [ ../base/users.nix ../base/bootloader.nix ../base/virtualisation.nix ];
+  imports = [
+    ../base/users.nix
+    ../base/bootloader.nix
+    ../base/virtualisation.nix
+    ../base/hardware.nix
+  ];
 
-  hardware = {
-    bluetooth.enable = true;
-    opengl.enable = true;
-    opengl.driSupport32Bit = true;
-  };
-
+  # Make sure that other operating systems show up aswell
   boot.loader.grub.useOSProber = true;
 
   time.timeZone = "Europe/Stockholm";
