@@ -19,6 +19,7 @@ in {
         ../modules/school.nix
         ../modules/fonts.nix
         ../modules/development.nix
+        ../modules/network-utils.nix
       ];
 
       gtk = {

@@ -108,6 +108,7 @@ in {
         ../modules/games.nix
         ../modules/fonts.nix
         ../modules/development.nix
+        ../modules/network-utils.nix
       ];
 
       gtk = {

@@ -49,14 +49,14 @@ let
     #   fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ];
     # })
 
-    ## DEVELOPMENT
-    docker
-    docker-compose
-    postman
-    rnix-lsp
-    nixfmt
-    direnv
-    nixpkgs-fmt
+    # ## DEVELOPMENT
+    # docker
+    # docker-compose
+    # postman
+    # rnix-lsp
+    # nixfmt
+    # direnv
+    # nixpkgs-fmt
 
     ## NETWORKING
     (lib.hiPrio traceroute)
