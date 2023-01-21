@@ -50,10 +50,10 @@ in {
 
         configFile = {
           "i3" = {
-            source = ./wm/i3;
+            source = ../wm/i3;
             recursive = true;
           };
-          "polybar/launch.sh" = { source = ./configs/polybar/launch.sh; };
+          "polybar/launch.sh" = { source = ../configs/polybar/launch.sh; };
         };
       };
 
