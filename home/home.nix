@@ -84,6 +84,7 @@ let
     inetutils
     ipcalc
     openssl
+    traceroute
   ];
 in {
   home-manager = {
