@@ -41,9 +41,6 @@ let
     libreoffice
     renoise
 
-    ## SCHOOL
-    ciscoPacketTracer8
-
     ## FONTS
     (pkgs.nerdfonts.override {
       fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ];
