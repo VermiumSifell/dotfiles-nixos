@@ -1,4 +1,4 @@
-{ config, pkgs, gtk-theme, wallpaper, nix-doom-emacs, ... }:
+{ config, lib, pkgs, gtk-theme, wallpaper, nix-doom-emacs, ... }:
 
 let
   username = "vermium";
@@ -64,7 +64,6 @@ let
     ipcalc
     wireshark
     nmap
-    whois
     dsniff
     tcpdump
     wireguard-tools
