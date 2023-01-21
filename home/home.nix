@@ -56,6 +56,8 @@ let
     rnix-lsp
     nixfmt
 
+    ## NETWORKING
+
     ## UTILITIES
     qalculate-qt
     speedcrunch
@@ -81,7 +83,7 @@ let
     s3cmd
     wireguard-tools
     tmux
-    inetutils
+    #inetutils
     ipcalc
     openssl
     traceroute
