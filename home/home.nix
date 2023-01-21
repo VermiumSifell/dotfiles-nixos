@@ -148,15 +148,6 @@ in {
       services.picom.enable = true;
       services.flameshot = { enable = true; };
 
-      programs.zsh = {
-        enable = true;
-        oh-my-zsh = {
-          enable = true;
-          plugins = [ "git" "thefuck" ];
-          theme = "robbyrussell";
-        };
-      };
-
       programs.autorandr = {
         enable = true;
         profiles = {

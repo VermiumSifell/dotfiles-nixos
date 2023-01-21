@@ -132,7 +132,14 @@
         true; # Open ports in the firewall for Source Dedicated Server
     };
 
-    zsh.enable = true;
+    programs.zsh = {
+      enable = true;
+      oh-my-zsh = {
+        enable = true;
+        plugins = [ "git" "thefuck" ];
+        theme = "robbyrussell";
+      };
+    };
 
     dconf = { enable = true; };
   };
