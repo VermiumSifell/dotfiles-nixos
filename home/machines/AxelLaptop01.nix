@@ -17,6 +17,7 @@ in {
         ../programs
         ../services
         ../modules/games.nix
+        ../modules/fonts.nix
       ];
 
       gtk = {
