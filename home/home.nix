@@ -64,7 +64,6 @@ let
     wireshark
     nmap
     traceroute
-    hping3
     whois
     arpwatch
     dsniff
