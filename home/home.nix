@@ -55,26 +55,34 @@ let
     postman
     rnix-lsp
     nixfmt
+    direnv
+    nixpkgs-fmt
 
     ## NETWORKING
+    #inetutils
+    ipcalc
+    wireshark
+    nmap
+    traceroute
+    hping3
+    whois
+    arpwatch
+    dsniff
+    tcpdump
 
     ## UTILITIES
     qalculate-qt
     speedcrunch
-    wireshark
     ripgrep
     wget
     unzip
     zip
-    direnv
-    nixpkgs-fmt
-    nmap
     btop
     dunst
     xfce.thunar
     ranger
-    protontricks
     networkmanagerapplet
+    protontricks
     pavucontrol
     virt-manager
     xclip
@@ -83,10 +91,7 @@ let
     s3cmd
     wireguard-tools
     tmux
-    #inetutils
-    ipcalc
     openssl
-    traceroute
   ];
 in {
   home-manager = {
