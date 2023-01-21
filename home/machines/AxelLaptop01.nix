@@ -49,14 +49,14 @@ let
     #   fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ];
     # })
 
-    ## DEVELOPMENT
-    docker
-    docker-compose
-    postman
-    rnix-lsp
-    nixfmt
-    direnv
-    nixpkgs-fmt
+    # ## DEVELOPMENT
+    # docker
+    # docker-compose
+    # postman
+    # rnix-lsp
+    # nixfmt
+    # direnv
+    # nixpkgs-fmt
 
     ## NETWORKING
     (lib.hiPrio traceroute)
@@ -107,6 +107,7 @@ in {
         ../services
         ../modules/games.nix
         ../modules/fonts.nix
+        ../modules/development.nix
       ];
 
       gtk = {
