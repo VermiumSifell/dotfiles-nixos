@@ -59,11 +59,11 @@ let
     nixpkgs-fmt
 
     ## NETWORKING
-    #inetutils
+    (lib.hiPrio traceroute)
+    inetutils
     ipcalc
     wireshark
     nmap
-    traceroute
     whois
     dsniff
     tcpdump
