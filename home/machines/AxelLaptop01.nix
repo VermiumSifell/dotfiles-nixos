@@ -4,6 +4,95 @@ let
   username = "vermium";
   homeDirectory = "/home/${username}";
   configHome = "${homeDirectory}/.config";
+
+  defaultPkgs = with pkgs; [
+    ## EDITORS
+    vim
+    vscodium
+    neovim
+
+    # ## GAMES
+    # lutris
+    # bastet
+    # minecraft
+    # prismlauncher
+
+    ## BROWSERS
+    qutebrowser
+    firefox
+    chromium
+
+    ## CHAT
+    discord
+    signal-desktop
+    element-desktop
+
+    ## TERMINALS
+    alacritty
+    kitty
+
+    ## EMAIL
+    thunderbird
+
+    ## MEDIA
+    spotify
+    vlc
+    gimp
+    libreoffice
+    renoise
+
+    # ## SCHOOL
+    # ciscoPacketTracer8
+
+    # ## FONTS
+    # (pkgs.nerdfonts.override {
+    #   fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ];
+    # })
+
+    ## DEVELOPMENT
+    docker
+    docker-compose
+    postman
+    rnix-lsp
+    nixfmt
+    direnv
+    nixpkgs-fmt
+
+    ## NETWORKING
+    (lib.hiPrio traceroute)
+    inetutils
+    ipcalc
+    wireshark
+    nmap
+    dsniff
+    tcpdump
+    wireguard-tools
+    bind
+
+    ## UTILITIES
+    qalculate-qt
+    speedcrunch
+    ripgrep
+    wget
+    unzip
+    zip
+    btop
+    dunst
+    xfce.thunar
+    ranger
+    networkmanagerapplet
+    protontricks
+    pavucontrol
+    virt-manager
+    xclip
+    maim
+    qbittorrent
+    s3cmd
+    tmux
+    openssl
+    thefuck
+    neofetch
+  ];
 in {
   home-manager = {
     useGlobalPkgs = true;
@@ -168,6 +257,8 @@ in {
       home = {
         inherit username homeDirectory;
         stateVersion = "22.05";
+
+        packages=defaultPkgs;
 
         file = { ".background-image" = { source = wallpaper; }; };
 
