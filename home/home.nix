@@ -67,6 +67,7 @@ let
     dsniff
     tcpdump
     wireguard-tools
+    bind
 
     ## UTILITIES
     qalculate-qt
