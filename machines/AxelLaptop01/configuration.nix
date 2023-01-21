@@ -132,6 +132,8 @@
         true; # Open ports in the firewall for Source Dedicated Server
     };
 
+    zsh.enable = true;
+
     dconf = { enable = true; };
   };
 
