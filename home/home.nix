@@ -65,7 +65,6 @@ let
     nmap
     traceroute
     whois
-    arpwatch
     dsniff
     tcpdump
 
