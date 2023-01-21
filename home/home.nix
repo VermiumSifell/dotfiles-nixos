@@ -11,11 +11,11 @@ let
     vscodium
     neovim
 
-    ## GAMES
-    lutris
-    bastet
-    minecraft
-    prismlauncher
+    # ## GAMES
+    # lutris
+    # bastet
+    # minecraft
+    # prismlauncher
 
     ## BROWSERS
     qutebrowser
@@ -41,13 +41,13 @@ let
     libreoffice
     renoise
 
-    ## SCHOOL
-    ciscoPacketTracer8
+    # ## SCHOOL
+    # ciscoPacketTracer8
 
-    ## FONTS
-    (pkgs.nerdfonts.override {
-      fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ];
-    })
+    # ## FONTS
+    # (pkgs.nerdfonts.override {
+    #   fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ];
+    # })
 
     ## DEVELOPMENT
     docker
