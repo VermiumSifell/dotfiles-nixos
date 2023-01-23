@@ -74,6 +74,8 @@ in {
       };
 
       services.picom.enable = true;
+      services.picom.vSync = true;
+
       services.flameshot = { enable = true; };
 
       programs.autorandr = {
