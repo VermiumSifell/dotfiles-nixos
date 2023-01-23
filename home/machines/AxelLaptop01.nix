@@ -11,11 +11,11 @@ let
     vscodium
     neovim
 
-    # ## GAMES
-    # lutris
-    # bastet
-    # minecraft
-    # prismlauncher
+    ## GAMES
+    lutris
+    bastet
+    minecraft
+    prismlauncher
 
     ## BROWSERS
     qutebrowser
@@ -41,22 +41,22 @@ let
     libreoffice
     renoise
 
-    # ## SCHOOL
-    # ciscoPacketTracer8
+    ## SCHOOL
+    ciscoPacketTracer8
 
-    # ## FONTS
-    # (pkgs.nerdfonts.override {
-    #   fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ];
-    # })
+    ## FONTS
+    (pkgs.nerdfonts.override {
+      fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ];
+    })
 
-    # ## DEVELOPMENT
-    # docker
-    # docker-compose
-    # postman
-    # rnix-lsp
-    # nixfmt
-    # direnv
-    # nixpkgs-fmt
+    ## DEVELOPMENT
+    docker
+    docker-compose
+    postman
+    rnix-lsp
+    nixfmt
+    direnv
+    nixpkgs-fmt
 
     ## NETWORKING
     (lib.hiPrio traceroute)
@@ -67,7 +67,6 @@ let
     dsniff
     tcpdump
     wireguard-tools
-    bind
 
     ## UTILITIES
     qalculate-qt
@@ -168,7 +167,14 @@ in {
 
       programs.autorandr = {
         enable = true;
-        profiles = {
+        profiles = let
+          internal =
+            "00ffffffffffff0030e42e0600000000001d0104952213780338d5975e598e271c505400000001010101010101010101010101010101243680a070381f403020350058c210000019182480a070381f403020350058c21000001900000000000000000000000000000000000000000002000c3aff0a3c7d1314267d000000002f";
+          external-1 =
+            "00ffffffffffff004c2d320d484b584305200103803c22782a5295a556549d250e5054bb8c00b30081c0810081809500a9c001010101023a801871382d40582c450056502100001e000000fd0032481e5111000a202020202020000000fc00433237463339300a2020202020000000ff0048344c543130313834390a202001e402031af14690041f131203230907078301000066030c00100080011d00bc52d01e20b828554056502100001e8c0ad090204031200c4055005650210000188c0ad08a20e02d10103e9600565021000018000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000061";
+          external-2 =
+            "00ffffffffffff004c2d1e023032414817100103802b1b782aee95a3544c99260f5054bfef80b30081808140714f010101010101010121399030621a274068b03600b10f1100001c000000fd00384b1e5110000a202020202020000000fc0053796e634d61737465720a2020000000ff004853484c3630313038360a2020004f";
+        in {
           AxelLaptop01v1 = {
             config = {
               "eDP-1-0" = {
@@ -186,10 +192,8 @@ in {
               };
             };
             fingerprint = {
-              HDMI-0 =
-                "00ffffffffffff004c2d320d484b584305200103803c22782a5295a556549d250e5054bb8c00b30081c0810081809500a9c001010101023a801871382d40582c450056502100001e000000fd0032481e5111000a202020202020000000fc00433237463339300a2020202020000000ff0048344c543130313834390a202001e402031af14690041f131203230907078301000066030c00100080011d00bc52d01e20b828554056502100001e8c0ad090204031200c4055005650210000188c0ad08a20e02d10103e9600565021000018000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000061";
-              eDP-1-0 =
-                "00ffffffffffff0030e42e0600000000001d0104952213780338d5975e598e271c505400000001010101010101010101010101010101243680a070381f403020350058c210000019182480a070381f403020350058c21000001900000000000000000000000000000000000000000002000c3aff0a3c7d1314267d000000002f";
+              eDP-1-0 = internal;
+              HDMI-0 = external-1;
             };
           };
           AxelLaptop01v2 = {
@@ -203,10 +207,7 @@ in {
               };
               "HDMI-0" = { enable = false; };
             };
-            fingerprint = {
-              eDP-1-0 =
-                "00ffffffffffff0030e42e0600000000001d0104952213780338d5975e598e271c505400000001010101010101010101010101010101243680a070381f403020350058c210000019182480a070381f403020350058c21000001900000000000000000000000000000000000000000002000c3aff0a3c7d1314267d000000002f";
-            };
+            fingerprint = { eDP-1-0 = external-1; };
           };
 
           AxelLaptop01v3 = {
@@ -227,35 +228,13 @@ in {
               };
             };
             fingerprint = {
-              eDP-1-0 =
-                "00ffffffffffff0030e42e0600000000001d0104952213780338d5975e598e271c505400000001010101010101010101010101010101243680a070381f403020350058c210000019182480a070381f403020350058c21000001900000000000000000000000000000000000000000002000c3aff0a3c7d1314267d000000002f";
-              HDMI-0 =
-                "00ffffffffffff004c2d1e023032414817100103802b1b782aee95a3544c99260f5054bfef80b30081808140714f010101010101010121399030621a274068b03600b10f1100001c000000fd00384b1e5110000a202020202020000000fc0053796e634d61737465720a2020000000ff004853484c3630313038360a2020004f";
+              eDP-1-0 = internal;
+              HDMI-0 = external-2;
             };
           };
 
         };
-        hooks.postswitch = {
-          "notify-i3" = "${pkgs.i3}/bin/i3-msg restart";
-          "change-dpi" = ''
-            case "$AUTORANDR_CURRENT_PROFILE" in
-              default)
-                DPI=120
-                ;;
-              home)
-                DPI=192
-                ;;
-              work)
-                DPI=144
-                ;;
-              *)
-                echo "Unknown profile: $AUTORANDR_CURRENT_PROFILE"
-                exit 1
-            esac
-
-            echo "Xft.dpi: $DPI" | ${pkgs.xorg.xrdb}/bin/xrdb -merge
-          '';
-        };
+        hooks.postswitch = { "notify-i3" = "${pkgs.i3}/bin/i3-msg restart"; };
       };
 
       programs.doom-emacs = {
@@ -268,7 +247,6 @@ in {
       home = {
         inherit username homeDirectory;
         stateVersion = "22.05";
-
         packages = defaultPkgs;
 
         file = { ".background-image" = { source = wallpaper; }; };
