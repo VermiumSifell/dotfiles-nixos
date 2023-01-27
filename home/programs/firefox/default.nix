@@ -55,7 +55,7 @@
 
           # Remove those extra empty spaces in both sides
           "browser.uiCustomization.state" = ''
-            {"placements":{"widget-overflow-fixed-list":[],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"PersonalToolbar":["import-button","personal-bookmarks"]},"seen":["developer-button"],"dirtyAreaCache":["nav-bar","PersonalToolbar"],"currentVersion":17,"newElementCount":4}
+            {"placements":{"widget-overflow-fixed-list":[],"currentVersion":17,"newElementCount":4}
           '';
         };
       };
