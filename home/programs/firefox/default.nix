@@ -52,11 +52,6 @@
 
           # Enable auto scrolling.
           "general.autoScroll" = true;
-
-          # Remove those extra empty spaces in both sides
-          "browser.uiCustomization.state" = ''
-            {"placements":{"widget-overflow-fixed-list":[],"currentVersion":17,"newElementCount":4}
-          '';
         };
       };
     };
