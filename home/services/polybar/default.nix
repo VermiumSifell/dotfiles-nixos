@@ -17,8 +17,7 @@ let
   xwindow = builtins.readFile ./modules/xwindow.ini;
   xworkspaces = builtins.readFile ./modules/xworkspaces.ini;
 
-in
-{
+in {
   services.polybar = {
     enable = true;
     package = pkgs.polybar.override {
@@ -28,23 +27,17 @@ in
       githubSupport = true;
       pulseSupport = true;
     };
-    config = ./config.ini;
-    extraConfig =
-      battery +
-      bspwm +
-      cpu +
-      date +
-      eth +
-      filesystem +
-      i3 +
-      memory +
-      network-base +
-      pulseaudio +
-      wlan +
-      xkeyboard +
-      xwindow +
-      xworkspaces
-    ;
+    config = {
+      "bar/panel" = {
+        monitor = "''${"env:MONITOR:eDP-1"}";
+        width = "100%";
+        height = "3%";
+        radius = 0;
+        modules-center = "date";
+      };
+    };
+    extraConfig = battery + bspwm + cpu + date + eth + filesystem + i3 + memory
+      + network-base + pulseaudio + wlan + xkeyboard + xwindow + xworkspaces;
     script = ''
       polybar top &
     '';
