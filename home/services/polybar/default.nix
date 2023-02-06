@@ -29,7 +29,7 @@ in {
     };
     config = {
       "bar/panel" = {
-        monitor = "''${"env:MONITOR:eDP-1"}";
+        monitor = "''${"env:MONITOR:eDP-1"}''";
         width = "100%";
         height = "3%";
         radius = 0;
