@@ -29,7 +29,6 @@
     };
   };
 
-  # TODO: Refactor into modules
   services = {
     xserver = {
       enable = true;

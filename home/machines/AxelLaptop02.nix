@@ -26,6 +26,7 @@ let
     discord
     signal-desktop
     element-desktop
+    tdesktop
 
     ## TERMINALS
     alacritty
