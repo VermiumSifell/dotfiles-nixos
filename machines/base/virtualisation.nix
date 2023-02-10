@@ -6,6 +6,9 @@
       enable = true;
       storageDriver = "btrfs";
     };
-    libvirtd = { enable = true; };
+    libvirtd = {
+      enable = true;
+      qemuRunAsRoot = false;
+    };
   };
 }
