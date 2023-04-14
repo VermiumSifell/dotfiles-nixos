@@ -3,15 +3,15 @@
 {
   programs.firefox = {
     enable = true;
-    extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-      bitwarden
-      ublock-origin
-      darkreader
-      kristofferhagen-nord-theme
-    ];
     profiles = {
       default = {
         isDefault = true;
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          bitwarden
+          ublock-origin
+          darkreader
+          kristofferhagen-nord-theme
+        ];
         settings = {
           # Remove warnings
           "browser.aboutConfig.showWarning" = false;
