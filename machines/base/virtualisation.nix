@@ -8,7 +8,7 @@
     };
     libvirtd = {
       enable = true;
-      qemuRunAsRoot = false;
+      qemu.runAsRoot = true;
     };
   };
 }

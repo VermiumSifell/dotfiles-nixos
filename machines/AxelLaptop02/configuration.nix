@@ -61,8 +61,10 @@
 
     openssh = {
       enable = true;
-      permitRootLogin = "no";
-      passwordAuthentication = false;
+      settings = {
+        PermitRootLogin = "no";
+        PasswordAuthentication = false;
+      };
     };
 
     gnome.gnome-keyring.enable = true;
@@ -71,6 +73,8 @@
     tlp.enable = true;
     greenclip.enable = true;
   };
+
+  boot.supportedFilesystems = [ "ntfs" ];
 
   programs = {
     dconf.enable = true;

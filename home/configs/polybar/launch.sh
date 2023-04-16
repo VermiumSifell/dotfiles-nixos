@@ -1,11 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/env bash
 
-notify-send -u low "Polybar" "Terminating instances"
+notify-send -a polybar -u low "Polybar" "Terminating instances"
 #Killing instances"
 #Terminating bar instances"
 
 # Terminate already running bar instances
-pkill -9 polybar
+killall -q polybar
 
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null
@@ -26,11 +26,11 @@ for bar in $BAR_NAMES; do
     for monitor in $ACTIVE_MONITORS; do
 
         if [[ "$monitor" == "$TRAY_OUTPUT" ]]; then
-            POLYBAR_TRAY_POS="right" MONITOR=$monitor polybar $bar >> /tmp/polybar.log 2>&1 &
+            POLYBAR_TRAY_POS="right" MONITOR=$monitor polybar --reload $bar >> /tmp/polybar.log 2>&1 &
         else
-            POLYBAR_TRAY_POS="none" MONITOR=$monitor polybar $bar >> /tmp/polybar.log 2>&1 &
+            POLYBAR_TRAY_POS="none" MONITOR=$monitor polybar --reload $bar >> /tmp/polybar.log 2>&1 &
         fi
-            notify-send -u low "Polybar" "Launched <b>$bar</b> for <b>$monitor</b>"
+            notify-send -a polybar -u low "Polybar" "Launched <b>$bar</b> for <b>$monitor</b>"
 
     done
 

@@ -6,6 +6,7 @@ let
   bspwm = builtins.readFile ./modules/bspwm.ini;
   cpu = builtins.readFile ./modules/cpu.ini;
   date = builtins.readFile ./modules/date.ini;
+  time = builtins.readFile ./modules/time.ini;
   eth = builtins.readFile ./modules/eth.ini;
   filesystem = builtins.readFile ./modules/filesystem.ini;
   i3 = builtins.readFile ./modules/i3.ini;
@@ -28,10 +29,11 @@ in {
       pulseSupport = true;
     };
     config = ./config.ini;
-    extraConfig = battery + bspwm + cpu + date + eth + filesystem + i3 + memory
-      + network-base + pulseaudio + wlan + xkeyboard + xwindow + xworkspaces;
+    extraConfig = battery + bspwm + cpu + date + time + eth + filesystem + i3
+      + memory + network-base + pulseaudio + wlan + xkeyboard + xwindow
+      + xworkspaces;
     script = ''
-      polybar top &
+      polybar panel &
     '';
   };
 }
